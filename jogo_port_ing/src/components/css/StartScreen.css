@@ -1,0 +1,70 @@
+/* components/StartScreen.css */
+@font-face {
+    font-family: 'YouMurderer BB';
+    src: url('../../assets/fonts/youmurdererbb_reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .title {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    color: var(--red, #680000);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'YouMurderer BB'; /* Usando a fonte personalizada */
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80%;
+    margin: 0;
+  }
+  
+  .start-button,
+  .creator-button,
+  .exit-button {
+      padding: 15px 30px;
+      font-size: 50px; /* Aumentar o tamanho da fonte */
+      color: #680000; /* Cor do texto */
+      background-color: transparent; /* Fundo transparente */
+      border: 2px solid transparent; /* Borda transparente */
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: Arapey;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-align: left; /* Alinhar texto à esquerda */
+      width: 100%; /* Fazer os botões ocuparem toda a largura do contêiner */
+  }
+
+    .button-container {
+        display: flex;
+        flex-direction: column; /* Alinhar verticalmente */
+        position: absolute;
+        top: 400px;
+        left: 100px;
+        gap: 10px; /* Espaçamento entre os botões */
+        align-items: flex-start; /* Alinhar os botões à esquerda do contêiner */
+    }
+
+  
+    .start-button:hover,
+    .creator-button:hover,
+    .exit-button:hover {
+        background-color: rgba(104, 0, 0, 0.2); /* Fundo levemente colorido ao passar o mouse */
+        color: #680000; /* Cor do texto ao passar o mouse */
+        border: 2px solid transparent; /* Manter a borda transparente ao passar o mouse */
+    }

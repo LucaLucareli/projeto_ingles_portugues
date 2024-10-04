@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import TypingText from './typing-text';
 
-const TextSequence = ({ texts, onComplete }) => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isTextCompleted, setIsTextCompleted] = useState(false); // Indica se o texto atual terminou de ser exibido
+const TextSequence = ({ texts, onComplete, leftName, rightName }) => {
+  const [currentTextIndex, setCurrentTextIndex] = React.useState(0);
+  const [isTextCompleted, setIsTextCompleted] = React.useState(false);
 
   const handleComplete = () => {
-    // Texto atual foi completamente exibido
     setIsTextCompleted(true);
   };
 
@@ -14,19 +13,19 @@ const TextSequence = ({ texts, onComplete }) => {
     const nextIndex = currentTextIndex + 1;
     if (nextIndex < texts.length) {
       setCurrentTextIndex(nextIndex);
-      setIsTextCompleted(false); // Reseta para o próximo texto
+      setIsTextCompleted(false);
     } else {
-      onComplete(); // Fim da sequência
+      onComplete();
     }
   };
 
   const handleInteraction = (event) => {
     if ((event.key === 'Enter' || event.type === 'click') && isTextCompleted) {
-      handleNextText(); // Apenas pula se o texto já tiver sido completamente exibido
+      handleNextText();
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener('keydown', handleInteraction);
     window.addEventListener('click', handleInteraction);
 
@@ -38,11 +37,19 @@ const TextSequence = ({ texts, onComplete }) => {
 
   return (
     <div style={styles.container}>
+      {/* Caixa de Nomes */}
+      <div style={styles.nameContainer}>
+        {leftName && <div style={styles.nameBox}>{leftName}</div>}
+        {rightName && <div style={styles.nameBox}>{rightName}</div>}
+      </div>
+
       {currentTextIndex < texts.length && (
-        <TypingText
-          text={texts[currentTextIndex]}
-          onComplete={handleComplete} // Chamado quando o texto terminar de ser exibido
-        />
+        <div style={styles.textBlock}>
+          <TypingText
+            text={texts[currentTextIndex]}
+            onComplete={handleComplete}
+          />
+        </div>
       )}
     </div>
   );
@@ -54,10 +61,42 @@ const styles = {
     bottom: 20,
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '1000px',
+    width: '1220px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  nameContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%', // Ajusta a largura para ocupar todo o espaço
+  },
+  nameBox: {
+    width: '200px', // Aumenta a largura da caixa de nome
+    height: '50px', // Define uma altura para a caixa de nome
+    borderRadius: '8px',
+    background: 'var(--red, #680000)', // Cor de fundo da caixa de nome
+    border: '2px solid var(--red, #680000)', // Cor da borda
+    color: '#fff', // Cor do texto
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '20px', // Tamanho da fonte
+  },
+  textBlock: {
+    width: '1220px',
+    height: '180px', // Diminui a altura da caixa de texto
+    flexShrink: 0,
+    borderRadius: '16px',
+    border: '6px solid var(--red, #680000)', // Cor da borda
+    background: 'var(--brown-bg, rgba(21, 14, 14, 0.50))',
+    padding: '15px', // Ajusta o padding
+    color: '#fff',
+    fontSize: '16px', // Diminui o tamanho do texto
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '-4px', // Ajuste para colar a caixa de texto
   },
 };
 

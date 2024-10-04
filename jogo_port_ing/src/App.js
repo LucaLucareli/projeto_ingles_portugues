@@ -1,43 +1,44 @@
 import React, { useState } from 'react';
 import ArrowSelection from './components/arrow-selection';
 import TextSequence from './components/text-sequence';
-import SquareGrid from './components/square-grid'; // Importa o novo componente SquareGrid
-import './App.css'; // Importa o arquivo CSS para estilização
+import SquareGrid from './components/square-grid';
+import StartScreen from './components/StartScreen';
+import CreatorsScreen from './components/CreatorScreen'; 
+import './App.css';
 
 import ichigo1 from './assets/personagem1/1.png';
 import ichigo2 from './assets/personagem1/2.png';
 import takakura1 from './assets/personagem2/3.png';
 import takakura2 from './assets/personagem2/4.png';
-import bg1 from './assets/backgrounds/backgrounds1.png'; // Imagem de fundo 1
-import bg2 from './assets/backgrounds/backgrounds2.png'; // Imagem de fundo 2
-import squareBackground from './assets/backgrounds/squareBackground.png'; // Novo background para o bloco com quadrados
-
+import bg1 from './assets/backgrounds/backgrounds1.png';
+import bg2 from './assets/backgrounds/backgrounds2.png';
+import squareBackground from './assets/backgrounds/squareBackground.png';
+import startScreenBackground from './assets/backgrounds/startScreenBackground.png'
 import video1 from './assets/videos/videoplayback.mp4';
 
 const App = () => {
-  const [showStartScreen, setShowStartScreen] = useState(true); // Estado para controlar a tela inicial
+  const [showStartScreen, setShowStartScreen] = useState(true);
+  const [showCreatorsScreen, setShowCreatorsScreen] = useState(false);
   const [phrases, setPhrases] = useState(['Escolha 1', 'Escolha 2']);
   const [disableNavigation, setDisableNavigation] = useState(false);
   const [currentBlock, setCurrentBlock] = useState('initial');
   const [showTextSequence, setShowTextSequence] = useState(false);
   const [textToShow, setTextToShow] = useState([]);
-  const [showVideo, setShowVideo] = useState(false); // Estado para exibir o vídeo
-  const [videoSource, setVideoSource] = useState(''); // Fonte do vídeo atual
-  const [showConversation, setShowConversation] = useState(false); // Estado para a tela de conversa
+  const [showVideo, setShowVideo] = useState(false);
+  const [videoSource, setVideoSource] = useState('');
+  const [showConversation, setShowConversation] = useState(false);
 
-  // URLs das imagens
   const [leftImage, setLeftImage] = useState(ichigo1);
   const [rightImage, setRightImage] = useState(takakura1);
-  const [backgroundImage, setBackgroundImage] = useState(bg1); // Estado da imagem de fundo
+  const [backgroundImage, setBackgroundImage] = useState(startScreenBackground);
 
-  // Mapa de blocos com opções, textos, imagens, vídeos (opcionais) e imagens de fundo
   const blocks = {
     'initial': {
       options: ['block2', 'block5'],
       texts: ['Texto relacionado à escolha 1.', 'Texto relacionado à escolha 2.'],
       images: [
-        { left: ichigo1, right: takakura2, background: bg1 },
-        { left: ichigo2, right: takakura1, background: bg2 }
+        { left: ichigo1, background: bg1 },
+        { left: ichigo2, background: bg2 }
       ],
       videos: [video1, null]
     },
@@ -52,7 +53,7 @@ const App = () => {
       videos: [null, video1]
     },
     'block5': {
-      options: ['blockSquare'], // Agora leva para o bloco com quadrados
+      options: ['blockSquare'],
       texts: ['Texto após escolha 1 na block5.', 'Texto após escolha 2 na block5.'],
       newPhrases: ['Escolha 5', 'Escolha 6'],
       images: [
@@ -62,16 +63,16 @@ const App = () => {
       videos: [null, null]
     },
     'blockSquare': {
-      background: squareBackground, // Fundo especial para esse bloco
+      background: squareBackground,
       squares: [
-        { id: 1, label: 'Quadrado 1', action: () => setShowConversation(true) }, // Ação para o quadrado 1
+        { id: 1, label: 'Quadrado 1', action: () => setShowConversation(true) },
         {
           id: 2, label: 'Quadrado 2', action: () => {
             setVideoSource(video1);
             setShowVideo(true);
             setDisableNavigation(true);
-            setCurrentBlock('block10'); // Navega diretamente para o bloco 10
-            setDisableNavigation(false); // Reabilita a navegação
+            setCurrentBlock('block10');
+            setDisableNavigation(false);
           }
         }
       ]
@@ -89,72 +90,103 @@ const App = () => {
   };
 
   const handleStart = () => {
-    setShowStartScreen(false); // Desativa a tela inicial e ativa o restante da aplicação
+    setShowStartScreen(false); 
+    setVideoSource(video1);    
+    setShowVideo(true);  
   };
 
   const handleSelection = (value) => {
     setDisableNavigation(true);
-
     const block = blocks[currentBlock];
+
     if (block) {
-      // Atualiza as informações do bloco selecionado
       setTextToShow([block.texts?.[value] || '']);
       setCurrentBlock(block.options?.[value] || currentBlock);
       setShowTextSequence(!!block.texts);
 
-      // Atualiza as imagens com base na escolha
       if (block.images) {
         setLeftImage(block.images[value].left);
         setRightImage(block.images[value].right);
-        setBackgroundImage(block.images[value].background); // Atualiza o fundo
+        setBackgroundImage(block.images[value].background);
       }
 
-      // Verifica se há um vídeo para exibir
       if (block.videos && block.videos[value]) {
-        setVideoSource(block.videos[value]); // Define a fonte do vídeo
-        setShowVideo(true); // Ativa a exibição do vídeo
+        setVideoSource(block.videos[value]);
+        setShowVideo(true);
       } else {
-        setShowVideo(false); // Não exibe vídeo se não houver
-        setDisableNavigation(false); // Reabilita navegação se não houver vídeo
+        setShowVideo(false);  
+        setDisableNavigation(false);
       }
     }
   };
 
   const handleBackFromConversation = () => {
-    setShowConversation(false); // Volta para o bloco com quadrados
+    setShowConversation(false);
   };
 
+  const handleCreators = () => {
+    setShowCreatorsScreen(true);  
+    setShowStartScreen(false);  
+  };
+  
   const handleVideoEnded = () => {
-    setShowVideo(false); // Fecha o vídeo quando ele termina
-    setDisableNavigation(false); // Reabilita a navegação após o término do vídeo
+    setShowVideo(false);
+    setDisableNavigation(false);
+  };
+
+  const handleBackToStart = () => {
+    setShowStartScreen(true);  
+    setShowCreatorsScreen(false);  
   };
 
   const handleTextComplete = () => {
     setShowTextSequence(false);
-
     const block = blocks[currentBlock];
+
     if (block && block.newPhrases) {
       setPhrases(block.newPhrases);
     }
   };
 
-  console.log('showVideo:', showVideo); // Adicione um log para depuração
-  console.log('videoSource:', videoSource); // Adicione um log para depuração
-  console.log('currentBlock:', currentBlock); // Adicione um log para depuração
+  // Função para obter os nomes dos personagens com base nas imagens
+  const getCharacterNames = () => {
+    let leftName = '';
+    let rightName = '';
+
+    if (leftImage === ichigo1 || leftImage === ichigo2) {
+      leftName = 'Ichigo';
+    }
+    if (rightImage === takakura1 || rightImage === takakura2) {
+      rightName = 'Takakura';
+    }
+
+    return { leftName, rightName };
+  };
+
+  const { leftName, rightName } = getCharacterNames();
 
   return (
-    <div className={`app-container ${!showStartScreen ? 'with-background' : ''}`} style={!showStartScreen ? { backgroundImage: `url(${backgroundImage})` } : {}}>
-      {/* Verifica se a tela inicial está ativa */}
-      {showStartScreen ? (
-        <div className="start-screen">
-          <button className="start-button" onClick={handleStart}>
-            Start
-          </button>
-        </div>
-      ) : (
+    <div 
+      className="app-container" 
+      style={{
+        backgroundImage: !showStartScreen && !showCreatorsScreen ? `url(${backgroundImage})` : 'none',
+      }}
+    >
+      {/* Renderiza a tela inicial */}
+      {showStartScreen && (
+        <StartScreen onStart={handleStart} onCreators={handleCreators} /> 
+      )}
+      
+      {/* Renderiza a tela de Creators */}
+      {showCreatorsScreen && (
+        <CreatorsScreen onBack={handleBackToStart} /> 
+      )}
+  
+      {/* Renderiza o jogo se não estiver nas telas de Start ou Creators */}
+      {!showStartScreen && !showCreatorsScreen && (
         <>
           {currentBlock === 'blockSquare' && !showConversation ? (
-            <SquareGrid squares={blocks['blockSquare'].squares} /> // Usando o componente SquareGrid
+            <SquareGrid squares={blocks['blockSquare'].squares} />
           ) : showConversation ? (
             <div className="conversation-block">
               <button className="back-button" onClick={handleBackFromConversation}>Voltar</button>
@@ -165,10 +197,14 @@ const App = () => {
           ) : (
             <>
               <div className="image-container">
-                <img src={leftImage} alt="Left" className="left-image" />
-                <img src={rightImage} alt="Right" className="right-image" />
+                {leftImage && (
+                  <img src={leftImage} alt="Left" className="left-image" />
+                )}
+                {rightImage && (
+                  <img src={rightImage} alt="Right" className="right-image" />
+                )}
               </div>
-
+  
               {showVideo && (
                 <div className="video-overlay">
                   <video
@@ -182,7 +218,7 @@ const App = () => {
                   </video>
                 </div>
               )}
-
+  
               {!showVideo && !showTextSequence && (
                 <ArrowSelection
                   phrases={phrases}
@@ -190,16 +226,21 @@ const App = () => {
                   disableNavigation={disableNavigation}
                 />
               )}
-
+  
               {!showVideo && showTextSequence && (
-                <TextSequence texts={textToShow} onComplete={handleTextComplete} />
+                <TextSequence 
+                  texts={textToShow} 
+                  onComplete={handleTextComplete} 
+                  leftName={leftName} 
+                  rightName={rightName} // Passa os nomes dos personagens para o componente TextSequence
+                />
               )}
             </>
           )}
         </>
       )}
     </div>
-  );
+  );  
 };
 
 export default App;

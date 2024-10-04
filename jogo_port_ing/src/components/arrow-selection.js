@@ -44,7 +44,16 @@ const ArrowSelection = ({ phrases, onSelection, disableNavigation }) => {
             onClick={() => handleClick(index)}
             style={{
               ...styles.item,
-              backgroundColor: selectedIndex === index ? '#e0e0e0' : '#fff',
+              backgroundColor: selectedIndex === index ? 'rgba(104, 0, 0, 0.4)' : 'transparent',
+              color: '#fff',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(104, 0, 0, 0.4)'; // Fundo vermelho com 40% de opacidade ao passar o mouse
+            }}
+            onMouseLeave={(e) => {
+              if (selectedIndex !== index) {
+                e.currentTarget.style.backgroundColor = 'transparent'; // Volta ao transparente quando o mouse sai
+              }
             }}
           >
             <span style={styles.arrow}>
@@ -71,23 +80,31 @@ const styles = {
     bottom: 20,
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '1000px',
+    width: '1092px', // Aumentado em mais 40% (780px * 1.4)
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   box: {
-    width: '100%',
-    backgroundColor: '#f0f0f0',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    overflow: 'hidden',
+    width: '1110px', // Aumentado em mais 40% (806px * 1.4)
+    height: '150px',
+    flexShrink: 0,
+    borderRadius: '16px',
+    border: '6px solid var(--red, #680000)',
+    background: 'var(--brown-bg, rgba(21, 14, 14, 0.50))',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden', // Para garantir que o fundo não ultrapasse o contêiner
   },
   item: {
     display: 'flex',
     alignItems: 'center',
     padding: '10px',
     cursor: 'pointer',
+    width: '100%', // Os itens ocupam a largura total do contêiner
+    boxSizing: 'border-box', // Certifica-se de que o padding seja incluído no tamanho total
   },
   arrow: {
     marginRight: '10px',
