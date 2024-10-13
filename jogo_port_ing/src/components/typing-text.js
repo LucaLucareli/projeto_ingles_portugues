@@ -6,6 +6,13 @@ const TypingText = ({ text = '', onComplete }) => {
   const [isCompleted, setIsCompleted] = useState(false); // Controle se a frase terminou de ser exibida
 
   useEffect(() => {
+    // Reseta o estado quando o texto muda
+    setDisplayedText('');
+    setCurrentIndex(0);
+    setIsCompleted(false);
+  }, [text]);
+
+  useEffect(() => {
     // Verifica se o texto é uma string válida
     if (!text || isCompleted || currentIndex >= text.length) return;
 
@@ -15,17 +22,17 @@ const TypingText = ({ text = '', onComplete }) => {
 
       if (currentIndex + 1 === text.length) {
         setIsCompleted(true);
-        onComplete(); // Notifica que o texto terminou de ser exibido
+        if (onComplete) onComplete(); // Notifica que o texto terminou de ser exibido
       }
     }, 50); // Atraso de 50ms entre cada letra
 
     return () => clearTimeout(timeout);
-  }, [currentIndex, text, isCompleted, onComplete]);
+  }, [currentIndex, text, isCompleted]);
 
   const skipTyping = () => {
     setDisplayedText(text);
     setIsCompleted(true);
-    onComplete(); // Completa a exibição e notifica o pai
+    if (onComplete) onComplete(); // Completa a exibição e notifica o pai
   };
 
   return (
@@ -40,14 +47,12 @@ const styles = {
     padding: '20px',
     borderRadius: '16px',
     maxWidth: '1200px',
-    height: 'auto', // Ajusta a altura conforme o conteúdo
     minHeight: '220px', // Mantém uma altura mínima
     textAlign: 'center',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff', // Texto branco
-    transition: 'all 0.3s ease', // Transição suave ao alterar estados
     margin: '20px auto', // Centraliza horizontalmente
   },
   text: {
