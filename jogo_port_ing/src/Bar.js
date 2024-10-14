@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/Casa_de_Abuelita.png';
-import Bar from './Bar';
+import CaseBackground from './assets/backgrounds/Bar.png';
+import BarCena2 from './BarCena2'
 
-const Biblioteca = ({ onBack }) => {
+const Bar = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
@@ -27,7 +27,7 @@ const Biblioteca = ({ onBack }) => {
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<Bar Biblioteca/>);
+        setNextScene(<BarCena2 />);
       }, 500);
     }
   };
@@ -59,28 +59,6 @@ const Biblioteca = ({ onBack }) => {
         }} 
       />
 
-       {/* Texto de narração que aparece após o primeiro diálogo */}
-       {textCompleted && (
-        <p style={{ 
-          fontStyle: 'italic', 
-          color: '#fff', 
-          position: 'absolute', 
-          top: '20px', 
-          left: '50%', 
-          transform: 'translateX(-50%)', 
-          zIndex: 1, 
-          backgroundColor: 'rgba(0, 0, 0, 0.6)', // Fundo preto com transparência
-          padding: '10px', // Adiciona um espaçamento interno
-          border: '2px solid red', // Borda vermelha
-          borderRadius: '10px', // Borda arredondada para um visual mais suave
-          maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
-        }}>
-          Unlocked Memory: 
-          Always when Duncan needs to follow the steps of someone, he remembers his childhood, when he played Detective with his brother.
-        </p>
-      )}
-      
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
@@ -90,4 +68,4 @@ const Biblioteca = ({ onBack }) => {
   );
 };
 
-export default Biblioteca;
+export default Bar;

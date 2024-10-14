@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
-import QuartoDuncan from './assets/backgrounds/quartoDuncan.jpg';
+import QuartoDuncan from './assets/backgrounds/quarto.png';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseDetailsScene from './CaseDetailsScene'; // O novo componente para a próxima cena
 

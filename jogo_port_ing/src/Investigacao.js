@@ -3,23 +3,19 @@ import CaseBackground from './assets/backgrounds/escritorio.jpeg';
 import DuncanImage from './assets/duncan/Duncan.png'; 
 import ArrowSelection from './components/arrow-selection'; 
 import InvestigarPai from './investigarPai'; // Certifique-se de que o caminho esteja correto
+import Biblioteca from './Biblioteca';
 
 const Investigacao = () => {
   const [currentScene, setCurrentScene] = useState(null); // Estado para armazenar a próxima cena
-  const [nextScene, setNextScene] = useState(null); // Estado para a cena seguinte
 
   const handleSelection = (choiceIndex) => {
     if (choiceIndex === 0) {
-      // Configura a próxima cena para "InvestigarPai"
-      setNextScene(<div>Navigating to: Investigar o pai</div>);
       setTimeout(() => {
         setCurrentScene(<InvestigarPai />); // Muda para o componente InvestigarPai após o delay
       }, 500); 
     } else if (choiceIndex === 1) {
-      // Configura a próxima cena para "Biblioteca"
-      setNextScene(<div>Navigating to: Biblioteca</div>);
       setTimeout(() => {
-        setCurrentScene('biblioteca'); // Muda para a cena da Biblioteca após o delay
+        setCurrentScene(<Biblioteca />); // Muda para a cena da Biblioteca após o delay
       }, 500);
     }
   };

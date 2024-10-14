@@ -1,38 +1,29 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/Casa_de_Abuelita.png';
-import Bar from './Bar';
+import CaseBackground from './assets/backgrounds/escritorio.jpeg';
+import Floricultura from  './Floricultura'
 
-const Biblioteca = ({ onBack }) => {
+const LookAtTheNotes = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
-    { quemfala: 'Esquerda', fala: 'I think something happened along the way. I need to investigate more thoroughly.' }
+    { quemfala: 'Esquerda', fala: 'If it is here, I can take a look.' },
+    { quemfala: 'Esquerda', fala: 'I didn’t expected this. That’s why she had that write in her backpack... Anyway, these notes are probably going to help me, maybe I can find a reason why someone did it to Charlotte.' },
   ]);
 
-  const newDialogues = [
-    { quemfala: 'Esquerda', fala: 'I turned right twice, just as her friend described.' },
-    { quemfala: 'Esquerda', fala: 'This is where she split off from her friend... The girl turned right, and the other one kept going straight.' },
-    { quemfala: 'Esquerda', fala: 'And that bar across the street... I need to check it out.' }
-  ];
-  
-  const [nextScene, setNextScene] = useState(null); // Estado para gerenciar a transição de cena
+  const [nextScene, setNextScene] = useState(null);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
-      setTextCompleted(true); // Marca o texto como completado
-      setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]); // Altera para os novos diálogos após um pequeno delay
-      }, 500); // Ajuste o tempo conforme necessário
+      setTextCompleted(true); // Marca os diálogos iniciais como completos
+      setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<Bar Biblioteca/>);
+        setNextScene(<Floricultura />);
       }, 500);
     }
   };
 
-  // Se nextScene não é null, renderiza a cena de Investigacao
   if (nextScene) {
     return nextScene;
   }
@@ -45,7 +36,8 @@ const Biblioteca = ({ onBack }) => {
       color: '#fff', 
       position: 'relative', 
       padding: '20px',
-      boxSizing: 'border-box' 
+      boxSizing: 'border-box',
+      overflow: 'hidden'
     }}>
       <img 
         src={DuncanImage} 
@@ -59,8 +51,7 @@ const Biblioteca = ({ onBack }) => {
         }} 
       />
 
-       {/* Texto de narração que aparece após o primeiro diálogo */}
-       {textCompleted && (
+        {/* Texto de narração que aparece após o primeiro diálogo */}
         <p style={{ 
           fontStyle: 'italic', 
           color: '#fff', 
@@ -77,10 +68,10 @@ const Biblioteca = ({ onBack }) => {
           textAlign: 'center' // Centraliza o texto
         }}>
           Unlocked Memory: 
-          Always when Duncan needs to follow the steps of someone, he remembers his childhood, when he played Detective with his brother.
+          Duncan remember the moment that his parents died because of the German Soldiers, it makes him feel angry and mor suspicious about this man.
         </p>
-      )}
-      
+
+      {/* Diálogo inicial seguido pelos novos diálogos */}
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
@@ -90,4 +81,4 @@ const Biblioteca = ({ onBack }) => {
   );
 };
 
-export default Biblioteca;
+export default LookAtTheNotes;

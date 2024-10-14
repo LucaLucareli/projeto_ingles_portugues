@@ -1,38 +1,29 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/Casa_de_Abuelita.png';
-import Bar from './Bar';
+import CaseBackground from './assets/backgrounds/quarto.png';
+import AcordaDelegacia from './AcordaDelegacia'
 
-const Biblioteca = ({ onBack }) => {
+const CasaNoite = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
-    { quemfala: 'Esquerda', fala: 'I think something happened along the way. I need to investigate more thoroughly.' }
+    { quemfala: 'Esquerda', fala: 'Finally, I’m home. I’ll have dinner, drink my coffee and sleep, I’m very tired.' },
   ]);
 
-  const newDialogues = [
-    { quemfala: 'Esquerda', fala: 'I turned right twice, just as her friend described.' },
-    { quemfala: 'Esquerda', fala: 'This is where she split off from her friend... The girl turned right, and the other one kept going straight.' },
-    { quemfala: 'Esquerda', fala: 'And that bar across the street... I need to check it out.' }
-  ];
-  
-  const [nextScene, setNextScene] = useState(null); // Estado para gerenciar a transição de cena
+
+  const [nextScene, setNextScene] = useState(null);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
-      setTextCompleted(true); // Marca o texto como completado
-      setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]); // Altera para os novos diálogos após um pequeno delay
-      }, 500); // Ajuste o tempo conforme necessário
+      setTextCompleted(true); // Marca os diálogos iniciais como completos
+      setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<Bar Biblioteca/>);
+        setNextScene(<AcordaDelegacia />);
       }, 500);
     }
   };
 
-  // Se nextScene não é null, renderiza a cena de Investigacao
   if (nextScene) {
     return nextScene;
   }
@@ -45,7 +36,8 @@ const Biblioteca = ({ onBack }) => {
       color: '#fff', 
       position: 'relative', 
       padding: '20px',
-      boxSizing: 'border-box' 
+      boxSizing: 'border-box',
+      overflow: 'hidden'
     }}>
       <img 
         src={DuncanImage} 
@@ -59,8 +51,7 @@ const Biblioteca = ({ onBack }) => {
         }} 
       />
 
-       {/* Texto de narração que aparece após o primeiro diálogo */}
-       {textCompleted && (
+        {/* Texto de narração que aparece após o primeiro diálogo */}
         <p style={{ 
           fontStyle: 'italic', 
           color: '#fff', 
@@ -77,17 +68,18 @@ const Biblioteca = ({ onBack }) => {
           textAlign: 'center' // Centraliza o texto
         }}>
           Unlocked Memory: 
-          Always when Duncan needs to follow the steps of someone, he remembers his childhood, when he played Detective with his brother.
+          When he was a child, his mother baked butter cookies with coffee, for him and his brother, at the weekends. So coffee brings him to best moments of his life. Also after older, coffee helped him to sleep.
         </p>
-      )}
-      
+
+      {/* Diálogo inicial seguido pelos novos diálogos */}
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Duncan"
+        rightName="Charles"
       />
     </div>
   );
 };
 
-export default Biblioteca;
+export default CasaNoite;
