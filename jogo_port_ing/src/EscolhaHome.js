@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/CasaEscolha.png';
+import CaseBackground from './assets/backgrounds/CasaFitima.png';
 import PredioEscolha from './PredioEscolha'
 
 

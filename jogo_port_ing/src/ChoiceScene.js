@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DuncanImage from './assets/duncan/Duncan.png'; // Imagem do Duncan
-import BackgroundImage from './assets/backgrounds/escritorio.jpeg'; // Fundo para a página
+import BackgroundImage from './assets/backgrounds/escritorio.png'; // Fundo para a página
 import ArrowSelection from './components/arrow-selection'; // Componente de seleção
 import CharlieScene from './CharlieScene'; // Novo componente para a escolha de Charlie
 import EmmaScene from './EmmaScene'; // Novo componente para a escolha de Emma

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CaseBackground from './assets/backgrounds/escritorio.jpeg'; 
+import CaseBackground from './assets/backgrounds/escritorio.png'; 
 import DuncanImage from './assets/duncan/Duncan.png'; 
 import ArrowSelection from './components/arrow-selection'; 
 import InvestigarPai from './investigarPai'; // Certifique-se de que o caminho esteja correto

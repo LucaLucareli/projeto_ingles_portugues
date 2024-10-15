@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/ruaSemSaida.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import Delegacia from './Delegacia';
 
 const RuaSemSaida = ({ onBack }) => {

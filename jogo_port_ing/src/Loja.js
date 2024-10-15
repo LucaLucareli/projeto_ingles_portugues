@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/loja.jpg';
+import CaseBackground from './assets/backgrounds/loja.png';
 import Rua from './Rua'
 
 const Loja = ({ onBack }) => {

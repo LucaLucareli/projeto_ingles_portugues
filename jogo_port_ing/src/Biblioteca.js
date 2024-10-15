@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/Casa_de_Abuelita.png';
+import CaseBackground from './assets/backgrounds/CasaFitima.png';
 import Bar from './Bar';
 
 const Biblioteca = ({ onBack }) => {
