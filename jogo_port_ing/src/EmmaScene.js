@@ -11,9 +11,10 @@ const EmmaScene = ({ onBack, onNavigate }) => {
     { quemfala: 'Direita', fala: 'Not exactly, I noticed she was a little worried, but when I asked she said she was fine.' },
     { quemfala: 'Esquerda', fala: 'During the way to the library, did something strange happen? Anyone came to talk to you?' },
     { quemfala: 'Direita', fala: 'No, it was normal, we’re just laughing and talking.' },
-    { quemfala: 'Esquerda', fala: 'Last questions, when you’re going out of the library, did she get out alone? Was she going home? And for what side did she walk, right or left?' },
-    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember from what side she went.' },
+    { quemfala: 'Esquerda', fala: 'Last questions, when you were going out of the library, did she get out alone? Was she going home? And for what side did she walk, right or left?' },
+    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember for what side she went.' },
     { quemfala: 'Esquerda', fala: 'That’s all, thanks!' },
+    { quemfala: 'Esquerda', fala: 'Now let`s start Charlie' },
   ]);
 
   // Continuação dos diálogos com Charlie

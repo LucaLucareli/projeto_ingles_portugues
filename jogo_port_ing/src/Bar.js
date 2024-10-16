@@ -7,7 +7,7 @@ import BarCena2 from './BarCena2'
 const Bar = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
+    { quemfala: 'Esquerda', fala: 'Her house is just 1km away from the library... it should have been an easy route.' },
     { quemfala: 'Esquerda', fala: 'I think something happened along the way. I need to investigate more thoroughly.' }
   ]);
 

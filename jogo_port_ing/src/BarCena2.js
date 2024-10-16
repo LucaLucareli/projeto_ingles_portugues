@@ -9,14 +9,12 @@ const BarCena2 = ({ onBack }) => {
   const [showMemoryPrompt, setShowMemoryPrompt] = useState(true); // Controla a exibição da frase inicial
   const [memoryUnlocked, setMemoryUnlocked] = useState(false); // Controla a exibição da memória desbloqueada
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
-    { quemfala: 'Esquerda', fala: 'I think something happened along the way. I need to investigate more thoroughly.' }
+    { quemfala: 'Esquerda', fala: 'Losing another case to Ford... that was a tough day' },
+    { quemfala: 'Esquerda', fala: "I don't even like drinking, but that day it seemed like the only solution." }
   ]);
 
   const newDialogues = [
-    { quemfala: 'Esquerda', fala: 'I turned right twice, just as her friend described.' },
-    { quemfala: 'Esquerda', fala: 'This is where she split off from her friend... The girl turned right, and the other one kept going straight.' },
-    { quemfala: 'Esquerda', fala: 'And that bar across the street... I need to check it out.' }
+    { quemfala: 'Esquerda', fala: 'Could I have seen her passing? Amnesia... or maybe I just drank too much. I need to find a way to overcome this memory lapse.' },
   ];
 
   const [nextScene, setNextScene] = useState(null);
@@ -100,7 +98,8 @@ const BarCena2 = ({ onBack }) => {
           textAlign: 'center'
         }}>
           Unlocked Memory: 
-          Duncan doesn’t feel comfortable drinking, because of his stepfather. While he was drunk, he was violent and hit Duncan's mother. Also, when Duncan drinks, most of the time he doesn’t remember anything from the night before. He only drinks if he’s completely exhausted.
+          Duncan doesn’t feel confortable drinking, because of his step father. While he was drunk, he was violent and hitted his mother, also when Duncan drinks, most of the times he doesn’t remember anything of the last night.
+          He just drinks if he’s completly exhausted.
         </p>
       )}
 
