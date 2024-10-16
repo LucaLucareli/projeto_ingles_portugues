@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CaseBackground from './assets/backgrounds/escritorio.png'; 
+import CaseBackground from './assets/backgrounds/Floricultura.png'; 
 import DuncanImage from './assets/duncan/Duncan.png';
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection';

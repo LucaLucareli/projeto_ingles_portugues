@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/escritorio.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import BillImage from './assets/Bill/Bill.png'
+import NotEnteredTheBakeryContinuaPadaria from './NotEnteredTheBakeryContinuaPadaria';
 
 const NotEnteredTheBakeryContinua = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -23,7 +24,7 @@ const NotEnteredTheBakeryContinua = ({ onBack }) => {
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinua />);
+        setNextScene(<NotEnteredTheBakeryContinuaPadaria />);
       }, 500);
     }
   };
@@ -50,7 +51,7 @@ const NotEnteredTheBakeryContinua = ({ onBack }) => {
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
@@ -61,7 +62,7 @@ const NotEnteredTheBakeryContinua = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '350px',
           height: 'auto' 
         }} 
       />

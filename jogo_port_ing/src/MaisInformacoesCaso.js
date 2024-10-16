@@ -55,9 +55,9 @@ const MaisInformacoesCaso = () => {
       {!showDuncanText ? (
         <>
           <div style={{ padding: '20px' }}>
-            <h2>Case Details</h2>
-            <p>"Here is presented the case file of the daughter of ..."</p>
-            <p style={{ fontStyle: 'italic', color: '#fff' }}>{"Player chooses in order which girls to interview."}</p>
+            <h2> </h2>
+            <p> </p>
+            <p style={{ fontStyle: 'italic', color: '#fff' }}>{""}</p>
           </div>
 
           <div style={{ 
@@ -119,9 +119,6 @@ const MaisInformacoesCaso = () => {
 
           {textCompleted && !choiceMade && (
             <>
-              <p style={{ fontStyle: 'italic', color: '#fff', position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-                {"Player chooses in order which girls to interview."}
-              </p>
               <ArrowSelection 
                 phrases={['Look at the notes', 'Not to look notes']} 
                 onSelection={handleSelection} 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
-import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/delegacia.png';
+import FordImage from './assets/Ford/Ford.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import NaRuaConfusoContinuacao from './NaRuaConfusoContinuacao';
 import OttoImagem from './assets/Otto/ottok.png';
 
@@ -42,13 +42,13 @@ const NaRuaConfuso = ({ onBack }) => {
       overflow: 'hidden'
     }}>
       <img 
-        src={DuncanImage} 
-        alt="Duncan" 
+        src={FordImage} 
+        alt="Ford" 
         style={{ 
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
@@ -59,7 +59,7 @@ const NaRuaConfuso = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />

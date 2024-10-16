@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/delegacia.png';
+import CaseBackground from './assets/backgrounds/quarto.png';
 import NaRuaConfuso from './NaRuaConfuso';
 
 const EmCasaDepoisDoCaso = ({ onBack }) => {

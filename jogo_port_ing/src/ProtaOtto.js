@@ -3,6 +3,8 @@ import CaseBackground from './assets/backgrounds/CasaFitima.png';
 import OttoImage from './assets/Otto/Otto.png';
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection';
+import NotEnteredTheBakery from './NotEnteredTheBakery';
+import EnteredTheBakery from './EnteredTheBakery';
 
 const ProtaOtto = () => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -35,11 +37,11 @@ const ProtaOtto = () => {
 
   // Renderização condicional com base no estado currentScene
   if (currentScene === 'did not enter bakery') {
-    return <ProtaOtto />;
+    return <NotEnteredTheBakery />;
   }
   
   if (currentScene === 'Entered the bakery') {
-    return <ProtaOtto />; 
+    return <EnteredTheBakery />; 
   }
 
   return (
@@ -55,7 +57,7 @@ const ProtaOtto = () => {
                   position: 'absolute', 
                   left: '20px',
                   bottom: '0px',
-                  width: '500px',
+                  width: '300px',
                   height: 'auto'
                 }} 
               />
@@ -86,7 +88,7 @@ const ProtaOtto = () => {
                 position: 'absolute', 
                 left: '20px',
                 bottom: '0px',
-                width: '500px',
+                width: '300px',
                 height: 'auto'
               }} 
             />

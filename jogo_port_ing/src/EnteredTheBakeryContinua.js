@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/escritorio.png';
-import EnteredTheBakeryContinuaPadaria from './EnteredTheBakeryContinuaPadaria'
+import CaseBackground from './assets/backgrounds/CasaOtto.png';
+import EnteredTheBakeryContinuaVoltaPadaria from './EnteredTheBakeryContinuaVoltaPadaria'
 
 const EnteredTheBakeryContinua = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -23,7 +23,7 @@ const EnteredTheBakeryContinua = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<EnteredTheBakeryContinuaPadaria />);
+        setNextScene(<EnteredTheBakeryContinuaVoltaPadaria />);
       }, 500);
     }
   };
@@ -50,7 +50,7 @@ const EnteredTheBakeryContinua = ({ onBack }) => {
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />

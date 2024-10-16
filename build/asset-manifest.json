@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b5737b01.css",
+    "main.js": "/static/js/main.2cbafbe6.js",
+    "static/js/453.72aa18ef.chunk.js": "/static/js/453.72aa18ef.chunk.js",
+    "static/media/Bar.png": "/static/media/Bar.3e0556c23b09e98cc7a7.png",
+    "static/media/CasaEscolha.png": "/static/media/CasaEscolha.3a15edd3368ca4130563.png",
+    "static/media/Casa_de_Abuelita.png": "/static/media/Casa_de_Abuelita.9316e47aa655105e8fba.png",
+    "static/media/startScreenBackground.png": "/static/media/startScreenBackground.8a3e6ccf2b4fa2d0c1ed.png",
+    "static/media/quarto.png": "/static/media/quarto.456fda39c44e3f9c02f0.png",
+    "static/media/youmurdererbb_reg.ttf": "/static/media/youmurdererbb_reg.d68a6573215580fc1bdd.ttf",
+    "static/media/ruaSemSaida.png": "/static/media/ruaSemSaida.a9f2c32cb7aec5f7f114.png",
+    "static/media/delegacia.png": "/static/media/delegacia.89e2ca2082450804d942.png",
+    "static/media/loja.jpg": "/static/media/loja.cebca3dd9a13a53c4def.jpg",
+    "static/media/quadroPolicia.jpg": "/static/media/quadroPolicia.4d24722612b848416764.jpg",
+    "static/media/escritorio.png": "/static/media/escritorio.608890180f196ba85693.jpeg",
+    "static/media/rua.jpg": "/static/media/rua.933f09a276902a255fa5.jpg",
+    "static/media/Duncan.png": "/static/media/Duncan.af73879afdfa7d8e0000.png",
+    "static/media/centralImage.jpeg": "/static/media/centralImage.2e04857b842006f854b8.jpeg",
+    "index.html": "/index.html",
+    "main.b5737b01.css.map": "/static/css/main.b5737b01.css.map",
+    "main.2cbafbe6.js.map": "/static/js/main.2cbafbe6.js.map",
+    "453.72aa18ef.chunk.js.map": "/static/js/453.72aa18ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5737b01.css",
+    "static/js/main.2cbafbe6.js"
+  ]
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CaseBackground from './assets/backgrounds/CasaFitima.png';
+import CaseBackground from './assets/backgrounds/Lugar.png';
 import OttoImage from './assets/Otto/Otto.png';
-import DuncanImage from './assets/duncan/duncank'
+import DuncanImage from './assets/duncan/duncank.png'
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection';
 import NotEnteredTheBakeryContinuaPadariaEscolhaIgnore from  './NotEnteredTheBakeryContinuaPadariaEscolhaIgnore'
@@ -61,7 +61,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
                         position: 'absolute', 
                         left: '20px',
                         bottom: '0px',
-                        width: '500px',
+                        width: '300px',
                         height: 'auto' 
                       }} 
                     />
@@ -80,7 +80,8 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
               <TextSequence 
                 texts={duncanDialogue}
                 onComplete={handleTextComplete} 
-                leftName="Duncan"
+                leftName="Otto"
+                rightName="Duncan"
               />
             </>
           )}
@@ -103,7 +104,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
               position: 'absolute',
               left: '20px',
               bottom: '0px',
-              width: '500px',
+              width: '300px',
               height: 'auto'
             }} /><img
               src={DuncanImage}

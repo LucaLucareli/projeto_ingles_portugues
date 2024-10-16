@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CaseBackground from './assets/backgrounds/CasaFitima.png';
+import CaseBackground from './assets/backgrounds/delegacia.png';
 import DuncanImage from './assets/duncan/Duncan.png';
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection';
@@ -42,7 +42,7 @@ const PredioEscolhaDelegacia = () => {
   }
   
   if (currentScene === 'top') {
-    return <PredioEscolhaDelegaciaCima />; // Renderiza EmmaScene
+    return <PredioEscolhaDelegaciaCima />; 
   }
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/escritorio.png';
+import CaseBackground from './assets/backgrounds/dentroDoPredio.jpg';
 import GroundFloor from './GroundFloor'
 
 const Superiors = ({ onBack }) => {

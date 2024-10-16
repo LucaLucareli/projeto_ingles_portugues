@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/escritorio.png';
+import CaseBackground from './assets/backgrounds/AssinaturaBill.png';
 import FalandoSobreMorte from './FalandoSobreMorte'
 
 const GroundFloor = ({ onBack }) => {
@@ -12,7 +12,6 @@ const GroundFloor = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'What’s happening to me? Have I missed some hint? Have I come to the wrong floriculture? Have I become bad at the only god thing that I’m left with?' },
     { quemfala: 'Esquerda', fala: 'Stop thinking about this, focus because there’s still one more room. MUST have something there.' },
     { quemfala: 'Esquerda', fala: "HERE'S A CARPET" },
-    { quemfala: 'Esquerda', fala: 'Por que eu gritei? Não posso mostrar que estou aqui, vai que o malfeitor ainda está aqui.' },
     { quemfala: 'Esquerda', fala: 'Why did I scream? I can’t show that I’m here. What if the bad guy is still here?' },
     { quemfala: 'Esquerda', fala: 'NOTHING? YOU\'VE GOT TO BE KIDDING ME. Calm down, Duncan, you might have let something pass, but what? That frame... yeah, might be it, it’s big enough to hide something, how didn’t I thought about it before?' },
     { quemfala: 'Esquerda', fala: 'I knew that I would find something here. But the little door is closed, why didn’t I bring my tools?' },

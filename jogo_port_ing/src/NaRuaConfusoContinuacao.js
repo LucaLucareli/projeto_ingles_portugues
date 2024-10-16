@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import OttoImagem from './assets/Otto/ottok.png';
-import CaseBackground from './assets/backgrounds/delegacia.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import ProtaOtto from './ProtaOtto'
 
 const NaRuaConfusoContinuacao = ({ onBack }) => {
@@ -66,7 +66,7 @@ const NaRuaConfusoContinuacao = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />

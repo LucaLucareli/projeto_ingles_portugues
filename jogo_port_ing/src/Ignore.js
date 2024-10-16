@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import duncanImage from './duncank'
-import CaseBackground from './assets/backgrounds/escritorio.png';
+import duncanImage from './assets/duncan/duncank.png'
+import CaseBackground from './assets/backgrounds/Lugar.png';
 import Fim from './Fim'
 
 const Ignore = ({ onBack }) => {
@@ -66,7 +66,7 @@ const Ignore = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />

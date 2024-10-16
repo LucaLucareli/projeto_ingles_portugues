@@ -51,32 +51,11 @@ const AcordaDelegacia = ({ onBack }) => {
         }} 
       />
 
-        {/* Texto de narração que aparece após o primeiro diálogo */}
-        <p style={{ 
-          fontStyle: 'italic', 
-          color: '#fff', 
-          position: 'absolute', 
-          top: '20px', 
-          left: '50%', 
-          transform: 'translateX(-50%)', 
-          zIndex: 1, 
-          backgroundColor: 'rgba(0, 0, 0, 0.6)', // Fundo preto com transparência
-          padding: '10px', // Adiciona um espaçamento interno
-          border: '2px solid red', // Borda vermelha
-          borderRadius: '10px', // Borda arredondada para um visual mais suave
-          maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
-        }}>
-          Unlocked Memory: 
-          When he was a child, his mother baked butter cookies with coffee, for him and his brother, at the weekends. So coffee brings him to best moments of his life. Also after older, coffee helped him to sleep.
-        </p>
-
       {/* Diálogo inicial seguido pelos novos diálogos */}
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Duncan"
-        rightName="Charles"
       />
     </div>
   );

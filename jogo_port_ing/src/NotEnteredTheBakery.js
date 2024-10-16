@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/escritorio.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import NotEnteredTheBakeryContinua from './NotEnteredTheBakeryContinua';
 import CedricImage from './assets/Cedric/Cedric.png'
 import DuncanImage from './assets/duncan/duncank.png'
@@ -59,7 +59,7 @@ const NotEnteredTheBakery = ({ onBack }) => {
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
@@ -70,7 +70,7 @@ const NotEnteredTheBakery = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: textCompleted ? "500px" : '300px',
           height: 'auto' 
         }} 
       />
