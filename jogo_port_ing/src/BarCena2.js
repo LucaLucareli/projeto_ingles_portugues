@@ -74,7 +74,8 @@ const BarCena2 = ({ onBack }) => {
           border: '2px solid red', 
           borderRadius: '10px', 
           maxWidth: '80%', 
-          textAlign: 'center'
+          textAlign: 'center',
+          fontSize: "30px"
         }}>
           Duncan looks at the bar, and the memory comes flooding back:
         </p>
@@ -95,7 +96,8 @@ const BarCena2 = ({ onBack }) => {
           border: '2px solid red', 
           borderRadius: '10px', 
           maxWidth: '80%', 
-          textAlign: 'center'
+          textAlign: 'center',
+           fontSize: "30px"
         }}>
           Unlocked Memory: 
           Duncan doesn’t feel confortable drinking, because of his step father. While he was drunk, he was violent and hitted his mother, also when Duncan drinks, most of the times he doesn’t remember anything of the last night.

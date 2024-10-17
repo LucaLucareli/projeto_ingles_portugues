@@ -63,7 +63,7 @@ const Loja = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Duncan"
-        rightName={textCompleted ? "Attendant" : null}
+        rightName={textCompleted ? null : "Attendant"}
       />
     </div>
   );

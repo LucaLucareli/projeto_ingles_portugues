@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
-import Biblioteca from './assets/backgrounds/delegacia.png';
+import Biblioteca from './Biblioteca';
 
 const InvestigarPai = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 

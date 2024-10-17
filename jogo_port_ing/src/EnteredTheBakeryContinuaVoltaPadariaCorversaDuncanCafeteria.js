@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CaseBackground from './assets/backgrounds/Lugar.png';
 import OttoImage from './assets/Otto/Otto.png';
-import DuncanImage from './assets/duncan/duncank.png'
+import DuncanImage from './assets/Ford/Fordz.png'
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection';
 import Ignore from  './Ignore'
@@ -73,7 +73,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
                         position: 'absolute', 
                         right: '20px',
                         bottom: '0px',
-                        width: '500px',
+                        width: '300px',
                         height: 'auto' 
                       }} 
                     />
@@ -114,7 +114,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
                 position: 'absolute',
                 right: '20px',
                 bottom: '0px',
-                width: '500px',
+                width: '300px',
                 height: 'auto'
               }} /></>
           )}

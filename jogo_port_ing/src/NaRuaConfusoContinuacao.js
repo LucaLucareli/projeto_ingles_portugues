@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
-import DuncanImage from './assets/duncan/Duncan.png';
+import FordImage from './assets/Ford/Ford.png';
 import OttoImagem from './assets/Otto/ottok.png';
 import CaseBackground from './assets/backgrounds/rua.png';
 import ProtaOtto from './ProtaOtto'
@@ -49,13 +49,13 @@ const NaRuaConfusoContinuacao = ({ onBack }) => {
       overflow: 'hidden'
     }}>
       <img 
-        src={DuncanImage} 
+        src={FordImage} 
         alt="Duncan" 
         style={{ 
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/loja.png';
-import DuncanImage from './assets/duncan/duncank.png'
+import CaseBackground from './assets/backgrounds/Lugar.png';
+import DuncanImage from './assets/Ford/Fordz.png'
 import NotEnteredTheBakeryContinuaPadariaEscolha from './NotEnteredTheBakeryContinuaPadariaEscolha';
 
 const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
@@ -70,7 +70,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
