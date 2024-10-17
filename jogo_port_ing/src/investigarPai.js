@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
-import Biblioteca from './Biblioteca';
+import Biblioteca from './assets/backgrounds/delegacia.png';
 
 const InvestigarPai = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Esquerda', fala: 'Thank you for coming in, Mr. Charles. I’m going to ask you some questions about the day your daughter disappeared.' },
-    { quemfala: 'Direita', fala: 'Yes... ask whatever you need, detective.' },
-    { quemfala: 'Esquerda', fala: 'Where were you on the night she disappeared? Did you have any contact with her before she left for the library?' },
-    { quemfala: 'Direita', fala: 'I was at home, that was my day off. A few hours before she left, I called her to know when she was going to be home and I asked if she wanted to I pick her up, but she said it was fine... Oh... if I had picked her up...' },
+    { quemfala: 'Direita', fala: 'Yes... aswer whatever you need, detective.' },
+    { quemfala: 'Esquerda', fala: 'Where were you on the night she disappeared? Did you have any contact with her before she left the library?' },
+    { quemfala: 'Direita', fala: 'I was at home, that was my day off. A few hours before she left, I called her to know when she was going to be home and I asked if she wanted me to pick her up, but she said it was fine... Oh... if I had picked her up...' },
     { quemfala: 'Esquerda', fala: 'The week before, was she normal?' },
     { quemfala: 'Direita', fala: 'I’m a very busy man, I don’t stay a lot of time home, but she looked all right.' },
     { quemfala: 'Esquerda', fala: 'You’re a very important man, do you think anyone could be angry with you and wanted to take revenge?' },
-    { quemfala: 'Direita', fala: 'I know that a lot of people that don’t like me, but I believe there isn’t anyone who could do such a thing.' },
+    { quemfala: 'Direita', fala: 'I know that a lot of people don’t like me, but I believe there isn’t anyone who could do such a thing.' },
     { quemfala: 'Esquerda', fala: 'Alright. That’s all for now, Mr. Charles. Thank you for your cooperation.' }
   ]);
 

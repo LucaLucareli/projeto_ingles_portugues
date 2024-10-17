@@ -9,12 +9,12 @@ const EmmaScene = ({ onBack, onNavigate }) => {
   const [dialogues, setDialogues] = useState([ // Estado para armazenar os diálogos
     { quemfala: 'Esquerda', fala: 'Emma, when you were going to the Library, was she acting suspicious?' },
     { quemfala: 'Direita', fala: 'Not exactly, I noticed she was a little worried, but when I asked she said she was fine.' },
-    { quemfala: 'Esquerda', fala: 'During the way to the library, did something strange happen? Anyone came to talk to you?' },
-    { quemfala: 'Direita', fala: 'No, it was normal, we’re just laughing and talking.' },
-    { quemfala: 'Esquerda', fala: 'Last questions, when you were going out of the library, did she get out alone? Was she going home? And for what side did she walk, right or left?' },
-    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember for what side she went.' },
+    { quemfala: 'Esquerda', fala: 'During the way to the library, did something strange happen? Did someone come to talk to you?' },
+    { quemfala: 'Direita', fala: 'No, it was normal, we were just laughing and talking.' },
+    { quemfala: 'Esquerda', fala: 'Last questions, when you were going out of the library, did she get out alone? Was she going home? And did she walk for which side, right or left?' },
+    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember which way she went.' },
     { quemfala: 'Esquerda', fala: 'That’s all, thanks!' },
-    { quemfala: 'Esquerda', fala: 'Now let`s start Charlie' },
+    { quemfala: 'Esquerda', fala: 'Now let`s talk with CharAnd for what side did she walk, right or leftlie.' },
   ]);
 
   // Continuação dos diálogos com Charlie

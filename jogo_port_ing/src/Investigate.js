@@ -69,7 +69,7 @@ const Investigate = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '300px',
+          width: '500px',
           height: 'auto' 
         }} 
       />
@@ -78,7 +78,8 @@ const Investigate = ({ onBack }) => {
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
-        leftName="Duncan"
+        leftName="Otto"
+        rightName="Duncan"
       />
     </div>
   );

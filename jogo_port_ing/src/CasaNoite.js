@@ -65,7 +65,8 @@ const CasaNoite = ({ onBack }) => {
           border: '2px solid red', // Borda vermelha
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
+          textAlign: 'center', // Centraliza o texto
+          fontSize: '30px'
         }}>
           Unlocked Memory: 
           When he was a child, his mother baked butter cookies with coffee, for him and his brother, at the weekends. So coffee brings him to best moments of his life. Also after older, coffee helped him to sleep.

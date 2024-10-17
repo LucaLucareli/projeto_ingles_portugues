@@ -55,7 +55,7 @@ const Ignore = ({ onBack }) => {
           position: 'absolute', 
           left: '20px',
           bottom: '0px',
-          width: '500px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
@@ -66,7 +66,7 @@ const Ignore = ({ onBack }) => {
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '300px',
+          width: '500px',
           height: 'auto' 
         }} 
       />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CaseBackground from './assets/backgrounds/escritorio.png'; 
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseFileImage from './assets/centralImage.jpeg'; 
+import CaseFileImage from './assets/Arquivo.png'; 
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection'; 
 import NotLookAtTheNotes from './NotLookAtTheNotes'; // Importando CharlieScene

@@ -65,7 +65,8 @@ const LookAtTheNotes = ({ onBack }) => {
           border: '2px solid red', // Borda vermelha
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
+          textAlign: 'center', // Centraliza o texto
+          fontSize: '30px'
         }}>
           Unlocked Memory: 
           Duncan remember the moment that his parents died because of the German Soldiers, it makes him feel angry and mor suspicious about this man.

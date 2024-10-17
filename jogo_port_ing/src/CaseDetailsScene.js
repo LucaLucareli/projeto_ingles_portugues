@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CaseBackground from './assets/backgrounds/escritorio.png'; 
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseFileImage from './assets/centralImage.jpeg'; 
+import CaseFileImage from './assets/Arquivo.png'; 
 import TextSequence from './components/text-sequence'; 
 import ArrowSelection from './components/arrow-selection'; 
 import CharlieScene from './CharlieScene'; // Importando CharlieScene
@@ -54,7 +54,7 @@ const CaseDetailsScene = () => {
     <div style={{ backgroundImage: `url(${CaseBackground})`, backgroundSize: 'cover', height: '100vh', color: '#fff', position: 'relative' }}>
       {!showDuncanText ? (
         <>
-          <div style={{ padding: '20px' }}>
+          <div style={{ padding: '30px', fontSize: "25px" }}>
             <h2>Case Details</h2>
             <p>"Here is presented the case file of the daughter of ..."</p>
             <p style={{ fontStyle: 'italic', color: '#fff' }}>{"Player chooses in order which girls to interview."}</p>
@@ -86,7 +86,7 @@ const CaseDetailsScene = () => {
               top: '20px',
               right: '20px',
               padding: '10px',
-              fontSize: '16px',
+              fontSize: '40px',
               cursor: 'pointer',
             }}
           >
@@ -119,7 +119,7 @@ const CaseDetailsScene = () => {
 
           {textCompleted && !choiceMade && (
             <>
-              <p style={{ fontStyle: 'italic', color: '#fff', position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+              <p style={{ fontStyle: 'italic', color: '#0a0a0a', position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)' , fontSize: "30px"}}>
                 {"Player chooses in order which girls to interview."}
               </p>
               <ArrowSelection 

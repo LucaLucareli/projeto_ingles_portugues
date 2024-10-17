@@ -34,9 +34,6 @@ const Investigacao = () => {
       position: 'relative' 
     }}>
       <>
-        <p style={{ fontStyle: 'italic', color: '#fff', position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-          {"Choose where to go next."}
-        </p>
         <ArrowSelection 
           phrases={['Investigate the father', 'Library']} 
           onSelection={handleSelection} 

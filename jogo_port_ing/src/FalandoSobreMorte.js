@@ -7,7 +7,7 @@ import DesvendandoOQueAconteceu from './DesvendandoOQueAconteceu'
 const FalandoSobreMorte = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Direita', fala: 'Gosh, Who could be so cruel to do it to a child?' },
+    { quemfala: 'Direita', fala: 'Gosh, Who could be so cruel to do it to a person?' },
     { quemfala: 'Esquerda', fala: 'It was a Serial Killer called Bill, unfortunately we know just a little about him. We’re looking for him for years, but in his few and tragic appearances, he just let us with his name, “Bill” written on the floor with the blood of the victim.' },
     { quemfala: 'Direita', fala: 'It can\'t go on like this, I\'m going to avenge my baby... I\'ll be right back, I just need to make a call.' },
     { quemfala: 'Esquerda', fala: 'Ok.' },
@@ -71,7 +71,8 @@ const FalandoSobreMorte = ({ onBack }) => {
           border: '2px solid red', // Borda vermelha
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
+          textAlign: 'center', // Centraliza o texto
+          fontSize: '30px'
         }}>
           Unlocked Memory: 
           Duncan remembers when he was a little kid and his parents was teaching German to him, when Germany was fine whitout the war.

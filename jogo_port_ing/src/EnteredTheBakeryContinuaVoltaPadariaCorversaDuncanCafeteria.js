@@ -81,7 +81,8 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
               <TextSequence 
                 texts={duncanDialogue}
                 onComplete={handleTextComplete} 
-                leftName="Duncan"
+                leftName="Otto"
+                rightName="Duncan"
               />
             </>
           )}

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/CasaFitima.png';
+import CaseBackground from './assets/backgrounds/Bar.png';
 import Bar from './Bar';
 
 const Biblioteca = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Her house is just 500 meters away from the library... it should have been an easy route.' },
+    { quemfala: 'Esquerda', fala: 'Her house is just 1km away from the library... it should have been an easy route.' },
     { quemfala: 'Esquerda', fala: 'I think something happened along the way. I need to investigate more thoroughly.' }
   ]);
 
@@ -74,7 +74,8 @@ const Biblioteca = ({ onBack }) => {
           border: '2px solid red', // Borda vermelha
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center' // Centraliza o texto
+          textAlign: 'center', // Centraliza o texto
+          fontSize: '30px'
         }}>
           Unlocked Memory: 
           Always when Duncan needs to follow the steps of someone, he remembers his childhood, when he played Detective with his brother.

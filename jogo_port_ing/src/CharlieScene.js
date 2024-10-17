@@ -14,16 +14,16 @@ const CharlieScene = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'Last questions, did she get out of the library alone? Did she tell where she was going? And which side did she go, right or left?' },
     { quemfala: 'Direita', fala: 'She walked out with me, but she turned right while I went straight. She was going home. I think I answered all your questions, can I go?' },
     { quemfala: 'Esquerda', fala: 'Are you stressed? Anyway, yeah you can go, thanks!' },
-    { quemfala: 'Esquerda', fala: 'Now let`s start Emma' },
+    { quemfala: 'Esquerda', fala: 'Now let`s talk with Emma.' },
   ]);
 
   const newDialogues = [
     { quemfala: 'Esquerda', fala: 'Emma, when you were going to the Library, was she acting suspicious?' },
     { quemfala: 'Direita', fala: 'Not exactly, I noticed she was a little worried, but when I asked she said she was fine.' },
-    { quemfala: 'Esquerda', fala: 'During the way to the library, did something strange happen? Anyone came to talk to you?' },
+    { quemfala: 'Esquerda', fala: 'During the way to the library, did something strange happen? Did someone come to talk to you?' },
     { quemfala: 'Direita', fala: 'No, it was normal, we were just laughing and talking.' },
-    { quemfala: 'Esquerda', fala: 'Last questions, when you were going out of the library, did she get out alone? Was she going home? And for what side did she walk, right or left?' },
-    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember for what side she went.' },
+    { quemfala: 'Esquerda', fala: 'Last questions, when you were going out of the library, did she get out alone? Was she going home? And did she walk for which side, right or left?' },
+    { quemfala: 'Direita', fala: 'She was alone, going home, and... I don’t remember which way she went.' },
     { quemfala: 'Esquerda', fala: 'That’s all, thanks!' },
     { quemfala: 'Esquerda', fala: 'So where do I go now?' }
   ];
