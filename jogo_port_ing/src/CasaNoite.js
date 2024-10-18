@@ -77,7 +77,6 @@ const CasaNoite = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Duncan"
-        rightName="Charles"
       />
     </div>
   );

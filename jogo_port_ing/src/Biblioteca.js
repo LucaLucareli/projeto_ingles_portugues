@@ -3,6 +3,7 @@ import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/Bar.png';
 import Bar from './Bar';
+import BarCena2 from './BarCena2';
 
 const Biblioteca = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -27,7 +28,7 @@ const Biblioteca = ({ onBack }) => {
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<Bar Biblioteca/>);
+        setNextScene(<BarCena2 />);
       }, 500);
     }
   };

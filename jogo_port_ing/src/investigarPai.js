@@ -3,23 +3,24 @@ import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
 import Biblioteca from './Biblioteca';
+import CharlesImage from './assets/Charles/Charles.png';
 
 const InvestigarPai = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Thank you for coming in, Mr. Charles. I’m going to ask you some questions about the day your daughter disappeared.' },
-    { quemfala: 'Direita', fala: 'Yes... aswer whatever you need, detective.' },
+    { quemfala: 'Esquerda', fala: 'Thanks for coming in, Mr. Charles. I\'m going to ask you some questions about the day your daughter disappeared.' },
+    { quemfala: 'Direita', fala: 'Yes... i\'ll answer whatever you need, detective.' },
     { quemfala: 'Esquerda', fala: 'Where were you on the night she disappeared? Did you have any contact with her before she left the library?' },
-    { quemfala: 'Direita', fala: 'I was at home, that was my day off. A few hours before she left, I called her to know when she was going to be home and I asked if she wanted me to pick her up, but she said it was fine... Oh... if I had picked her up...' },
-    { quemfala: 'Esquerda', fala: 'The week before, was she normal?' },
-    { quemfala: 'Direita', fala: 'I’m a very busy man, I don’t stay a lot of time home, but she looked all right.' },
-    { quemfala: 'Esquerda', fala: 'You’re a very important man, do you think anyone could be angry with you and wanted to take revenge?' },
-    { quemfala: 'Direita', fala: 'I know that a lot of people don’t like me, but I believe there isn’t anyone who could do such a thing.' },
-    { quemfala: 'Esquerda', fala: 'Alright. That’s all for now, Mr. Charles. Thank you for your cooperation.' }
+    { quemfala: 'Direita', fala: 'I was home, that was my day off. A few hours before she left, I called her to know when she was going to be home, and asked if she wanted me to pick her up, but she said it was fine... Oh... if I insisted a bit more...' },
+    { quemfala: 'Esquerda', fala: 'Was she looking as usual on the last weeks?' },
+    { quemfala: 'Direita', fala: 'I\'m a very busy man, I don\'t stay much at home, but she looked all right.' },
+    { quemfala: 'Esquerda', fala: 'You\'re a very important man, do you think anyone could be angry with you and wanted to take revenge?' },
+    { quemfala: 'Direita', fala: 'I know that a lot of people don\'t like me, but I believe there isn\'t anyone who could do such a thing.' },
+    { quemfala: 'Esquerda', fala: 'Alright. That\'s all for now, Mr. Charles. Thank you for your cooperation.' }
   ]);
 
   const newDialogues = [
-    { quemfala: 'Esquerda', fala: "Something about him isn't right, I think I’ve seen this man before. Maybe I'm just being paranoid... or maybe there's more that I don’t know." },
+    { quemfala: 'Esquerda', fala: "Something about him isn't right, I think I\'ve seen this man before. Maybe I'm just being paranoid... or maybe there's more that I don\'t know." },
   ];
   
   const [nextScene, setNextScene] = useState(null); // Estado para gerenciar a transição de cena
@@ -84,6 +85,18 @@ const InvestigarPai = ({ onBack }) => {
         onComplete={handleTextComplete}
         leftName="Duncan"
         rightName={textCompleted ? "" : "Charles"} 
+      />
+
+      <img 
+        src={CharlesImage} 
+        alt="Charles" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
+          bottom: '0px',
+          width: '313px',
+          height: 'auto' 
+        }} 
       />
     </div>
   );

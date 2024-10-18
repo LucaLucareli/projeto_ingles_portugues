@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/loja.png';
-import Rua from './Rua'
+import Rua from './Rua';
+import AttendantImage from './assets/Attendant/Attendant.png';
 
 const Loja = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -64,6 +65,18 @@ const Loja = ({ onBack }) => {
         onComplete={handleTextComplete}
         leftName="Duncan"
         rightName={textCompleted ? null : "Attendant"}
+      />
+
+      <img 
+        src= {textCompleted ? AttendantImage : ''} 
+        alt="Attendant" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
+          bottom: '0px',
+          width: '250px',
+          height: 'auto' 
+        }} 
       />
     </div>
   );

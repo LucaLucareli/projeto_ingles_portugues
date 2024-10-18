@@ -55,7 +55,6 @@ const DelegaciaCena2 = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Duncan"
-        rightName="Charles"
       />
     </div>
   );

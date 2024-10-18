@@ -29,7 +29,7 @@ const AcordaDelegacia = ({ onBack }) => {
   }
 
   return (
-    <div style={{ 
+    <div style={{
       backgroundImage: `url(${CaseBackground})`, 
       backgroundSize: 'cover', 
       height: '100vh', 
