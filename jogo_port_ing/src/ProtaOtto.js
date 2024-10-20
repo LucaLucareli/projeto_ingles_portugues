@@ -26,7 +26,7 @@ const ProtaOtto = () => {
       setCurrentScene('Entered the bakery');
     } else if (choiceIndex === 1) {
       // Altera o estado para navegar para EmmaScene
-      setCurrentScene('did not enter bakery');
+      setCurrentScene('Did not enter bakery');
     }
     setChoiceMade(true);
   };
@@ -36,12 +36,12 @@ const ProtaOtto = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'did not enter bakery') {
-    return <NotEnteredTheBakery />;
+  if (currentScene === 'Entered the bakery') {
+    return <EnteredTheBakery />;
   }
   
-  if (currentScene === 'Entered the bakery') {
-    return <EnteredTheBakery />; 
+  if (currentScene === 'Did not enter bakery') {
+    return <NotEnteredTheBakery />; 
   }
 
   return (
@@ -50,6 +50,14 @@ const ProtaOtto = () => {
         <>
           {!textCompleted && (
             <>
+                <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+                <p>Upon realizing that Duncan doesn't remember, he begins to explain...
+                </p>
+                <br/>
+                <p>
+                (The player now controls Otto and can choose his actions.)
+                </p>
+              </div>
               <img 
                 src={OttoImage} 
                 alt="Duncan" 
@@ -73,7 +81,7 @@ const ProtaOtto = () => {
           {textCompleted && !choiceMade && (
             <>
               <ArrowSelection 
-                phrases={['Entered the bakery', 'did not enter bakery']} 
+                phrases={['Did not enter bakery', 'Entered the bakery']} 
                 onSelection={handleSelection} 
                 disableNavigation={false} 
               />

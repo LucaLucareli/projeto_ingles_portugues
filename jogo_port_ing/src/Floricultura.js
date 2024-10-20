@@ -40,12 +40,12 @@ const Floricultura = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'building') {
-    return <PredioEscolha />;
+  if (currentScene === 'home') {
+    return <EscolhaHome />;
   }
   
-  if (currentScene === 'home') {
-    return <EscolhaHome />; // Renderiza EmmaScene
+  if (currentScene === 'building') {
+    return <PredioEscolha />; // Renderiza EmmaScene
   }
 
   return (
@@ -54,6 +54,15 @@ const Floricultura = () => {
         <>
           {!textCompleted && (
             <>
+              <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+                <p>Duncan reaches the corner and comes across an abandoned building.
+                </p>
+                <p> He checks the doors and they are locked, which would make the investigation much more difficult.
+                </p>
+                <p>
+                Duncan decides to look for a new entrance and finds an iron door at the back of the building. Maybe a crowbar will do the trick.
+                </p>
+              </div>
               <img 
                 src={DuncanImage} 
                 alt="Duncan" 

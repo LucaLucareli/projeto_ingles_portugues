@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
+import CharlesImage from './assets/Charles/Charles.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
 import DesvendandoOQueAconteceu from './DesvendandoOQueAconteceu'
 
@@ -45,6 +46,9 @@ const FalandoSobreMorte = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+            <div style={{ padding: '150px 30px 30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+        <p>Duncan tells Charles about his daughter's death, leaving him in shock.</p>
+      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 
@@ -53,6 +57,17 @@ const FalandoSobreMorte = ({ onBack }) => {
           left: '20px',
           bottom: '0px',
           width: '500px',
+          height: 'auto' 
+        }} 
+      />
+    <img 
+        src={CharlesImage} 
+        alt="Charles" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
+          bottom: '0px',
+          width: '313px',
           height: 'auto' 
         }} 
       />

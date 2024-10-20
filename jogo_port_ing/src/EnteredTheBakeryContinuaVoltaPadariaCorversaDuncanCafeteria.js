@@ -24,10 +24,10 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
   const handleSelection = (choiceIndex) => {
     if (choiceIndex === 0) {
       // Altera o estado para navegar para CharlieScene
-      setCurrentScene('Investigate');
+      setCurrentScene('Ignore');
     } else if (choiceIndex === 1) {
       // Altera o estado para navegar para EmmaScene
-      setCurrentScene('Ignore');
+      setCurrentScene('Investigate');
     }
     setChoiceMade(true);
   };
@@ -55,6 +55,16 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
         <>
           {!textCompleted && (
             <>
+
+                  <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+                      <p>
+                      The two are walking towards the coffee shop, and they pass through an alley. They hear a strange noise coming from this alley. 
+                      </p>
+                      <p>
+                      As Duncan is always attentive to these details, he stays alert and thinks about investigating.
+                      </p>
+
+                   </div>
                     <img 
                       src={OttoImage} 
                       alt="Otto" 
@@ -90,7 +100,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
           {textCompleted && !choiceMade && (
             <>
               <ArrowSelection 
-                phrases={['Investigate', 'Ignore']} 
+                phrases={['Ignore', 'Investigate']} 
                 onSelection={handleSelection} 
                 disableNavigation={false} 
               />

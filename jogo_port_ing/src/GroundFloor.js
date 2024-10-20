@@ -50,6 +50,23 @@ const GroundFloor = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+      <div style={{ padding: '10px', fontSize: "20px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+    <p>
+      Duncan scans the empty rooms, frustrated at finding nothing useful and wondering if he took the wrong path.
+    </p>
+    <p>
+      In the last room, you only find a rug, but nothing underneath it. Discouraged, he remembers a large painting in the first room.
+    </p>
+    <p>
+      When he removes it, he discovers a small locked iron door. Angry, he punches the rusty door, which opens. 
+    </p>
+    <p>
+      Inside, he finds a dark and cramped room, where he sees Charlotte, dead and covered in blood.
+    </p>
+    <p>
+      Shocked, he briefly thinks about his rivalry with Ford, but forces himself to focus and decides to call for reinforcements.
+    </p>
+      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 

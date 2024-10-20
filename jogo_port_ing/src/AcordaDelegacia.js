@@ -39,6 +39,10 @@ const AcordaDelegacia = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+       <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+        <p>The next day he wakes up at his office desk at the police station. Once you're used to it, you start your work normally.
+        </p>
+      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 

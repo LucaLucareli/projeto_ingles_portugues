@@ -42,6 +42,16 @@ const LookAround = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+            <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+        <p>Duncan hears a noise coming from a dumpster and, upon investigating, realizes it's just a mouse.
+        </p>
+        <p>
+        When pushing the bucket, he discovers a hidden wooden trapdoor.
+        </p>
+        <p>
+        With the flashlight, he goes down a dark corridor and finds a staircase, which takes him inside the abandoned building.
+        </p>
+      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 

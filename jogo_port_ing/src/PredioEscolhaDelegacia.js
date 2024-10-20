@@ -37,12 +37,12 @@ const PredioEscolhaDelegacia = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'low') {
-    return <PredioEscolhaDelegaciaBaixo />;
+  if (currentScene === 'top') {
+    return <PredioEscolhaDelegaciaCima />;
   }
   
-  if (currentScene === 'top') {
-    return <PredioEscolhaDelegaciaCima />; 
+  if (currentScene === 'low') {
+    return <PredioEscolhaDelegaciaBaixo />; 
   }
 
   return (

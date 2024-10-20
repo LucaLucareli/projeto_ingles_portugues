@@ -105,6 +105,15 @@ const BarCena2 = ({ onBack }) => {
         </p>
       )}
 
+{!memoryUnlocked && (
+      <div style={{ padding: '10px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+        <p>Walking, Duncan looks at the bar and remembers that night,
+        </p>
+        <p>after losing another case to Ford and, despite not liking it, he decides to drink to clear his head.
+        </p>
+      </div>
+      )}
+
       {/* Diálogo inicial seguido pelos novos diálogos */}
       <TextSequence 
         texts={dialogues}

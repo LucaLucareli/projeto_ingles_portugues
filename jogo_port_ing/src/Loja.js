@@ -47,6 +47,11 @@ const Loja = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+
+<div style={{ padding: '10px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+        <p>Continuing down the street, he finds a 24-hour convenience store. Upon entering the store, he asks a few questions.
+        </p>
+      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 
@@ -68,7 +73,7 @@ const Loja = ({ onBack }) => {
       />
 
       <img 
-        src= {textCompleted ? AttendantImage : ''} 
+        src= {textCompleted ? '' : AttendantImage} 
         alt="Attendant" 
         style={{ 
           position: 'absolute', 

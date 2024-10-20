@@ -36,12 +36,12 @@ const PredioEscolhaEs = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'Ground floor') {
-    return <GroundFloor />;
+  if (currentScene === 'Superiors') {
+    return <Superiors />;
   }
   
-  if (currentScene === 'Superiors') {
-    return <Superiors />; // Renderiza EmmaScene
+  if (currentScene === 'Ground floor') {
+    return <GroundFloor />; // Renderiza EmmaScene
   }
 
   return (

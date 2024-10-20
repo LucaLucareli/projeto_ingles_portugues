@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
+import CharlesImage from './assets/Charles/Charles.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
 import EmCasaDepoisDoCaso from './EmCasaDepoisDoCaso'
 
@@ -50,6 +51,17 @@ const DesvendandoOQueAconteceuFalandoComOCharles = ({ onBack }) => {
           left: '20px',
           bottom: '0px',
           width: '500px',
+          height: 'auto' 
+        }} 
+      />
+      <img 
+        src={CharlesImage} 
+        alt="Charles" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
+          bottom: '0px',
+          width: '313px',
           height: 'auto' 
         }} 
       />

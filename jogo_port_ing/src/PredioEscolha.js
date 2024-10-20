@@ -39,12 +39,12 @@ const PredioEscolha = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'Police Station') {
-    return <PredioEscolhaDelegacia />;
+  if (currentScene === 'Look around') {
+    return <LookAround />;
   }
   
-  if (currentScene === 'Look around') {
-    return <LookAround />; 
+  if (currentScene === 'Police Station') {
+    return <PredioEscolhaDelegacia />; 
   }
 
   return (

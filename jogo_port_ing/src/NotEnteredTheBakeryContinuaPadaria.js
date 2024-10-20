@@ -13,7 +13,6 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
   ]);
 
   const newDialogues = [
-    { quemfala: 'Esquerda', fala: 'Calm down Duncan, I’m here, let’s go take a coffee to you think and talk about it.' },
     { quemfala: 'Direita', fala: 'I’m a monster... I did all of that bad things... I’m the Serial Killer.' },
     { quemfala: 'Esquerda', fala: 'Yeah, I don’t know what happen, but you kind looked like another person...' },
     { quemfala: 'Direita', fala: 'Ok, maybe it will help a bit. Wait, you said that I told you my name was Ford?' },
@@ -52,6 +51,14 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+                          <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+                <p>They returned to the present.
+                </p>
+                <br/>
+                <p>
+                (The player now controls Duncan and can choose his actions.)
+                </p>
+              </div>
       <img 
         src={OttoImage} 
         alt="Otto" 
@@ -64,7 +71,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         }} 
       />
       <img 
-        src={DuncanImage} 
+        src={textCompleted ? DuncanImage : ""} 
         alt="Bill" 
         style={{ 
           position: 'absolute', 

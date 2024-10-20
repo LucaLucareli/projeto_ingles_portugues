@@ -76,8 +76,8 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
-        rightName="Otto"
-        leftName="Duncan"
+        leftName="Otto"
+        rightName="Duncan"
       />
     </div>
   );

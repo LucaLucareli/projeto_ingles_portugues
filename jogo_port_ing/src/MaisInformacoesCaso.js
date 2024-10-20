@@ -28,10 +28,10 @@ const MaisInformacoesCaso = () => {
   const handleSelection = (choiceIndex) => {
     if (choiceIndex === 0) {
       // Altera o estado para navegar para CharlieScene
-      setCurrentScene('Look at the notes');
+      setCurrentScene('Not look at the notes');
     } else if (choiceIndex === 1) {
       // Altera o estado para navegar para EmmaScene
-      setCurrentScene('Not look at the notes');
+      setCurrentScene('Look at the notes');
     }
     setChoiceMade(true);
   };
@@ -95,6 +95,10 @@ const MaisInformacoesCaso = () => {
         </>
       ) : (
         <>
+          <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+            <p>When opening the case files he finds a new folder. Yes, Ford is on this case too, unfortunately for him, his biggest rival is investigating the same crime.
+            </p>
+          </div>
           {!textCompleted && (
             <>
               <img 
@@ -120,7 +124,7 @@ const MaisInformacoesCaso = () => {
           {textCompleted && !choiceMade && (
             <>
               <ArrowSelection 
-                phrases={['Look at the notes', 'Not to look notes']} 
+                phrases={['Not to look notes', 'Look at the notes']} 
                 onSelection={handleSelection} 
                 disableNavigation={false} 
               />
