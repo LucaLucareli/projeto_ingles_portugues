@@ -8,8 +8,6 @@ import AttendantImage from './assets/Attendant/Attendant.png';
 const Loja = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Perfect, an open store... Maybe I can get more information here.' },
-    { quemfala: 'Esquerda', fala: 'I need to figure out what happened near the library that night. Maybe the attendant saw something.' },
     { quemfala: 'Esquerda', fala: 'Hi, were you here last night? I’m Detective Duncan, I’m investigating a disappearance and need to know if you saw anything strange happening near the library.' },
     { quemfala: 'Direita', fala: 'Hi, I work until 7 p.m. someone else works the night shift. When I left, the bar was busy, and the library was still open.' },
     { quemfala: 'Esquerda', fala: 'Thank you, bye.'}

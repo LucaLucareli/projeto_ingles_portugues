@@ -86,7 +86,7 @@ const MaisInformacoesCaso = () => {
               top: '20px',
               right: '20px',
               padding: '10px',
-              fontSize: '16px',
+              fontSize: '40px',
               cursor: 'pointer',
             }}
           >

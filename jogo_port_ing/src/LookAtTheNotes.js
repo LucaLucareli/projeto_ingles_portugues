@@ -2,21 +2,26 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/escritorio.png';
-import Floricultura from  './Floricultura'
+import Floricultura from './Floricultura';
 
 const LookAtTheNotes = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
-  const [dialogues, setDialogues] = useState([ 
+  const [dialogues, setDialogues] = useState([
     { quemfala: 'Esquerda', fala: 'If it is here, I can take a look.' },
-    { quemfala: 'Esquerda', fala: 'I didn’t expected this. That’s why she had that write in her backpack... Anyway, these notes are probably going to help me, maybe I can find a reason why someone did it to Charlotte.' },
   ]);
+
+  const newDialogues = [
+    { quemfala: 'Esquerda', fala: 'I didn’t expect this. That’s why she had that written in her backpack... Anyway, these notes are probably going to help me. Maybe I can find a reason why someone did it to Charlotte.' },
+  ];
 
   const [nextScene, setNextScene] = useState(null);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
-      setTextCompleted(true); // Marca os diálogos iniciais como completos
-      setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
+      setTextCompleted(true);
+      setTimeout(() => {
+        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]);
+      }, 500);
     } else {
       setTimeout(() => {
         setNextScene(<Floricultura />);
@@ -51,7 +56,8 @@ const LookAtTheNotes = ({ onBack }) => {
         }} 
       />
 
-        {/* Texto de narração que aparece após o primeiro diálogo */}
+      {/* Texto de narração que aparece após o primeiro diálogo */}
+      {textCompleted && (
         <p style={{ 
           fontStyle: 'italic', 
           color: '#fff', 
@@ -60,17 +66,18 @@ const LookAtTheNotes = ({ onBack }) => {
           left: '50%', 
           transform: 'translateX(-50%)', 
           zIndex: 1, 
-          backgroundColor: 'rgba(0, 0, 0, 0.6)', // Fundo preto com transparência
-          padding: '10px', // Adiciona um espaçamento interno
-          border: '2px solid red', // Borda vermelha
-          borderRadius: '10px', // Borda arredondada para um visual mais suave
-          maxWidth: '80%', // Limita a largura do texto
-          textAlign: 'center', // Centraliza o texto
+          backgroundColor: 'rgba(0, 0, 0, 0.6)', 
+          padding: '10px', 
+          border: '2px solid red', 
+          borderRadius: '10px', 
+          maxWidth: '80%', 
+          textAlign: 'center', 
           fontSize: '30px'
         }}>
           Unlocked Memory: 
-          Duncan remember the moment that his parents died because of the German Soldiers, it makes him feel angry and mor suspicious about this man.
+          Duncan remembers the moment when his parents died because of German soldiers. This makes him feel angry and more suspicious about this man.
         </p>
+      )}
 
       {/* Diálogo inicial seguido pelos novos diálogos */}
       <TextSequence 

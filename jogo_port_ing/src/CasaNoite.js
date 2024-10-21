@@ -39,9 +39,6 @@ const CasaNoite = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
-      <div style={{ padding: '150px 30px 30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>Arriving home, Duncan will have dinner and coffee before bed, as usual.</p>
-      </div>
       <img 
         src={DuncanImage} 
         alt="Duncan" 

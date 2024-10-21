@@ -9,12 +9,14 @@ const BarCena2 = ({ onBack }) => {
   const [showMemoryPrompt, setShowMemoryPrompt] = useState(true); // Controla a exibição da frase inicial
   const [memoryUnlocked, setMemoryUnlocked] = useState(false); // Controla a exibição da memória desbloqueada
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Losing another case to Ford... that was a tough day' },
+    { quemfala: 'Esquerda', fala: 'Last night, I came here... I had lost another case to Ford... that was tough.' },
     { quemfala: 'Esquerda', fala: "I don't even like drinking, but that day it seemed like the only solution." }
   ]);
 
   const newDialogues = [
     { quemfala: 'Esquerda', fala: 'Could I have seen her passing? Amnesia... or maybe I just drank too much. I need to find a way to overcome this memory lapse.' },
+    { quemfala: 'Esquerda', fala: 'Perfect, an open store... Maybe I can get more information here.' },
+    { quemfala: 'Esquerda', fala: 'I need to figure out what happened near the library that night. Maybe the attendant saw something.' },
   ];
 
   const [nextScene, setNextScene] = useState(null);
