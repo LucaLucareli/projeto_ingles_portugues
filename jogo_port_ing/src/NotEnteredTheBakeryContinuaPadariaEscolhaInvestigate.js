@@ -8,17 +8,16 @@ import Fim from './Fim'
 const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Let’s ignore this sound, I already have a lot to worry.' },
-    { quemfala: 'Direita', fala: 'Yeah, take a break.' },
-  
-    { quemfala: 'Direita', fala: 'I think that someone who gets out of the alleyway is following us...' },
-    { quemfala: 'Direita', fala: 'He took a gun, RUN OTTO, RUN!' },
-    { quemfala: 'Esquerda', fala: 'Oh, my gosh.' },
-    { quemfala: 'Direita', fala: 'He’s away from us Otto. Will everything be ok...' },
-    { quemfala: 'Esquerda', fala: 'STOP DUNCAN, THE CAR!' },
-  
-    { quemfala: 'Direita', fala: '...' },
-    { quemfala: 'Esquerda', fala: 'Duncan! Are you ok? WAKE UP BROTHER! SOMEONE HELP, PLEASE!!' }
+    { quemfala: 'Direita', fala: 'This sound is really weird. Otto stay here, I’ll take a look to check if everything is ok.' },
+    { quemfala: 'Direita', fala: 'The sound again...' },
+    { quemfala: 'Direita', fala: 'Sh*t, he has a gun, I need to stop him, I’ll jump on him, so it will be harder for him to shoot me.' },
+    { quemfala: 'Esquerda', fala: 'I need to do something... I’ll take this gun.' },
+    { quemfala: 'Esquerda', fala: 'YOU LET MY BROTHER GO OR I’LL SHOOT YOU.' },
+    { quemfala: '???:', fala: 'Ok...' },
+    { quemfala: 'Direita', fala: 'Thank you brother, it was amazing, I can deal from here.' },
+    { quemfala: 'Direita', fala: 'So, who are you? And what do you want?' },
+    { quemfala: '???:', fala: 'I wanted to kill you, you arrested my father...' },
+    { quemfala: 'Direita', fala: 'Charles has another child? I didn’t expect that, but anyway, you will be next to your dad in jail.' }
   ])
 
   const [nextScene, setNextScene] = useState(null);
