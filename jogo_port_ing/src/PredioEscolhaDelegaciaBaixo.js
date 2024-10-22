@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/delegacia.png';
-import PredioEscolhaEs from  './PredioEscolhaEs'
+import Black from  './Black'
 
 const PredioEscolhaDelegaciaBaixo = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Esquerda', fala: 'I found it!' },
-    { quemfala: 'Esquerda', fala: 'With a lot of strength, for sure it will open.' }
+    { quemfala: 'Esquerda', fala: 'With a lot of strength, the iron door for sure will open.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
@@ -19,7 +19,7 @@ const PredioEscolhaDelegaciaBaixo = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<PredioEscolhaEs />);
+        setNextScene(<Black />);
       }, 500);
     }
   };

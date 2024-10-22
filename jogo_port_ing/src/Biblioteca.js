@@ -48,7 +48,7 @@ const Biblioteca = ({ onBack }) => {
       boxSizing: 'border-box' 
     }}>
       {!textCompleted && (
-              <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+   <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
               <p>Duncan goes to the library and tries to retrace the girl's steps.</p>
             </div>
       )}

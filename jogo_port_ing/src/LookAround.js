@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/Predio.png';
-import PredioEscolhaEs from  './PredioEscolhaEs'
+import Black from  './Black'
 
 const LookAround = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -22,7 +22,7 @@ const LookAround = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<PredioEscolhaEs />);
+        setNextScene(<Black />);
       }, 500);
     }
   };
@@ -42,7 +42,7 @@ const LookAround = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
-            <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+              <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
         <p>Duncan hears a noise coming from a dumpster and, upon investigating, realizes it's just a mouse.
         </p>
         <p>

@@ -3,7 +3,7 @@ import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/CasaFitima.png';
 import PredioEscolha from './PredioEscolha'
-
+import YoungLady from './assets/YoungWoman/younglady.png'
 
 const EscolhaHome = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -52,6 +52,18 @@ const EscolhaHome = ({ onBack }) => {
           left: '20px',
           bottom: '0px',
           width: '500px',
+          height: 'auto' 
+        }} 
+      />
+
+      <img 
+        src={YoungLady} 
+        alt="Young Lady" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
+          bottom: '0px',
+          width: '450px',
           height: 'auto' 
         }} 
       />

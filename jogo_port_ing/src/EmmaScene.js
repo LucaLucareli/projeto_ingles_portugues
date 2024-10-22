@@ -59,7 +59,7 @@ const EmmaScene = ({ onBack, onNavigate }) => {
       padding: '20px',
       boxSizing: 'border-box' 
     }}>
-      <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+   <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
         <p>The investigation begins by talking to the girl's friends who accompanied her that night</p>
       </div>
 
@@ -83,7 +83,7 @@ const EmmaScene = ({ onBack, onNavigate }) => {
       />
 
       <img 
-        src= {textCompleted ? CharlieImage : EmmaImage}
+        src= {textCompleted ? EmmaImage : CharlieImage}
         alt= {textCompleted ? "Charlie" : "Emma"}
         style={{ 
           position: 'absolute', 

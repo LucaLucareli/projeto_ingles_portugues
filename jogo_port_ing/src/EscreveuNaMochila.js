@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CaseBackground from './assets/backgrounds/escritorio.png'; 
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseFileImage from './assets/Arquivo.png'; 
+import CaseFileImage from './assets/FordNotes.png'; 
 import TextSequence from './components/text-sequence'; 
 import Floricultura from './Floricultura';
 
@@ -32,11 +32,10 @@ const EscreveuNaMochila = () => {
     <div style={{ backgroundImage: `url(${CaseBackground})`, backgroundSize: 'cover', height: '100vh', color: '#fff', position: 'relative' }}>
       {!showDuncanText ? (
         <>
-          /* Perdao, nao sabia oq colocar aq */
           <div style={{ padding: '30px', fontSize: "25px" }}>
-            <h2>Backpack text</h2>
-            <p>That’s what was written in this paper inside her backpack</p>
-            <p style={{ fontStyle: 'italic', color: '#fff' }}>{"Player chooses in order which girls to interview."}</p>
+            <h2>Ford Notes</h2>
+            <p>Notes that ford took about that case</p>
+            <p style={{ fontStyle: 'italic', color: '#fff' }}>{"He can Finaly trespass that dirty Ford"}</p>
           </div>
 
           <div style={{ 

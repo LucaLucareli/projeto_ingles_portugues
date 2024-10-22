@@ -5,6 +5,7 @@ import TextSequence from './components/text-sequence';
 import ArrowSelection from './components/arrow-selection';
 import EscolhaHome from './EscolhaHome'
 import PredioEscolha from './PredioEscolha'
+import Florista from './assets/Attendant/florista.png'
 
 const Floricultura = () => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -54,7 +55,7 @@ const Floricultura = () => {
         <>
           {!textCompleted && (
             <>
-              <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
+    <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
                 <p>Duncan reaches the corner and comes across an abandoned building.
                 </p>
                 <p> He checks the doors and they are locked, which would make the investigation much more difficult.
@@ -71,6 +72,18 @@ const Floricultura = () => {
                   left: '20px',
                   bottom: '0px',
                   width: '500px',
+                  height: 'auto'
+                }} 
+              />
+
+<img 
+                src={Florista} 
+                alt="Florista" 
+                style={{ 
+                  position: 'absolute', 
+                  right: '20px',
+                  bottom: '0px',
+                  width: '288px',
                   height: 'auto'
                 }} 
               />
