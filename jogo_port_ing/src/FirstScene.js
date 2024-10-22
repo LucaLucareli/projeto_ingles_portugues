@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import QuartoDuncan from './assets/backgrounds/quarto.png';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseDetailsScene from './LookAtTheNotes'; // O novo componente para a próxima cena
+import CaseDetailsScene from './CaseDetailsScene'; // O novo componente para a próxima cena
 
 const FirstScene = ({ onBack }) => {
   const [showNextScene, setShowNextScene] = useState(false); // Controle para mostrar a próxima cena
