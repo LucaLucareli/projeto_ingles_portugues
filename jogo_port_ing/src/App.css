@@ -105,8 +105,9 @@
 }
 
 
-.app-container {
+.video-container {
   background-color: black; /* Set the background color to black */
+  display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -115,8 +116,8 @@
 
 
 video {
-  width: 100vw;  /* Make the video fill the entire viewport width */
-  height: 100vh; /* Make the video fill the entire viewport height */
+  width: 60vw;  /* Make the video fill the entire viewport width */
+  height: 95vh; /* Make the video fill the entire viewport height */
   object-fit: cover; /* Ensure the video covers the screen without distortion */
   background-color: black;
 }

@@ -44,22 +44,26 @@ const App = () => {
         <StartScreen onStart={handleStart} onStart2={handleStart2} onCreators={handleCreators} />
       )}
       {scene === 'firstScene' && !isFirstVideoEnded && (
-        <video
-          autoPlay
-          controls
-          src={Video1}
-          className="full-screen-video"
-          onEnded={handleFirstVideoEnd} // Chama quando o primeiro vídeo termina
-        />
+        <div className='video-container'>
+          <video
+            autoPlay
+            controls
+            src={Video1}
+            className="full-screen-video"
+            onEnded={handleFirstVideoEnd} // Chama quando o primeiro vídeo termina
+          />
+        </div>
       )}
       {isFirstVideoEnded && (
-        <video
-          autoPlay
-          controls
-          src={Video2}
-          className="full-screen-video"
-          onEnded={handleSecondVideoEnd} // Chama quando o segundo vídeo termina
-        />
+        <div className='video-container'>
+          <video
+            autoPlay
+            controls
+            src={Video2}
+            className="full-screen-video"
+            onEnded={handleSecondVideoEnd} // Chama quando o segundo vídeo termina
+          />
+        </div>
       )}
       {scene === 'firstSceneContent' && <FirstScene onBack={handleBack} />}
       {scene === 'scenePredio' && <PredioEscolhaEs onBack={handleBack} />}
