@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 import CaseBackground from './assets/backgrounds/escritorio.png';
-import Floricultura from './Floricultura';
+import EscreveuNaMochila from './EscreveuNaMochila'
 
 const LookAtTheNotes = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([
-    { quemfala: 'Esquerda', fala: 'If it is here, I can take a look.' },
+    { quemfala: 'Esquerda', fala: 'If it\'s here, I can take a look.' },
   ]);
-
-  const newDialogues = [
-    { quemfala: 'Esquerda', fala: 'I didn’t expect this. That’s why she had that written in her backpack... Anyway, these notes are probably going to help me. Maybe I can find a reason why someone did it to Charlotte.' },
-  ];
 
   const [nextScene, setNextScene] = useState(null);
 
@@ -20,11 +16,11 @@ const LookAtTheNotes = ({ onBack }) => {
     if (!textCompleted) {
       setTextCompleted(true);
       setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]);
+        setDialogues(prevDialogues => [...prevDialogues]);
       }, 500);
     } else {
       setTimeout(() => {
-        setNextScene(<Floricultura />);
+        setNextScene(<EscreveuNaMochila />);
       }, 500);
     }
   };
