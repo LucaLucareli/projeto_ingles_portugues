@@ -104,3 +104,21 @@
   cursor: pointer;
   font-size: 18px;
 }
+
+
+.app-container {
+  background-color: black; /* Set the background color to black */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+video {
+  width: 100vw;  /* Make the video fill the entire viewport width */
+  height: 100vh; /* Make the video fill the entire viewport height */
+  object-fit: cover; /* Ensure the video covers the screen without distortion */
+  background-color: black;
+}
