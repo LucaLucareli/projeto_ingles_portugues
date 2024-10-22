@@ -62,7 +62,6 @@
 .app-container {
   position: relative;
   height: 100vh; /* Ocupa toda a altura da tela */
-  display: flex;
   flex-direction: column;
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
@@ -109,7 +108,6 @@
 .app-container {
   background-color: black; /* Set the background color to black */
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
