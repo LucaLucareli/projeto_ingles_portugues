@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/AssinaturaBill.png';
-import FalandoSobreMorte from './FalandoSobreMorte'
+// import andarVazio from './assets/backgrounds/andarVazio.png'; // Sala vazia
+// import AndarTapete from './assets/backgrounds/andar.png'; // Sala com tapete
+import portaAberta from './assets/backgrounds/portaAberta.png'; // Porta aberta
+// import DescobertaDoCorpo from './assets/backgrounds/AssinaturaBill.png'; // Descoberta do corpo
+import FalandoSobreMorte from './FalandoSobreMorte';
+
 
 const GroundFloor = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -41,7 +45,7 @@ const GroundFloor = ({ onBack }) => {
 
   return (
     <div style={{ 
-      backgroundImage: `url(${CaseBackground})`, 
+      backgroundImage: `url(${portaAberta})`, 
       backgroundSize: 'cover', 
       height: '100vh', 
       color: '#fff', 
