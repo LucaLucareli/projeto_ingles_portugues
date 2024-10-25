@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
+import SusanImage from './assets/Susan/Susan.png';
 import CaseBackground from './assets/backgrounds/rua.png';
 import EnteredTheBakeryContinua from './EnteredTheBakeryContinua'
 
@@ -52,6 +53,18 @@ const EnteredTheBakery = ({ onBack }) => {
         style={{ 
           position: 'absolute', 
           left: '20px',
+          bottom: '0px',
+          width: '300px',
+          height: 'auto' 
+        }} 
+      />
+
+<img 
+        src={SusanImage} 
+        alt="Susan" 
+        style={{ 
+          position: 'absolute', 
+          right: '20px',
           bottom: '0px',
           width: '300px',
           height: 'auto' 

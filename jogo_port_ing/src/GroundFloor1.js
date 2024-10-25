@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 // import andarVazio from './assets/backgrounds/andarVazio.png'; // Sala vazia
-import AndarTapete from './assets/backgrounds/andarVazio.png'; // Sala com tapete
+import AndarTapete from './assets/backgrounds/portaFechada.png'; // Sala com tapete
 //import portaAberta from './assets/backgrounds/portaAberta.png'; // Porta aberta
 // import DescobertaDoCorpo from './assets/backgrounds/AssinaturaBill.png'; // Descoberta do corpo
-import GroundFloor1 from './GroundFloor1';
+import GroundFloor2 from './GroundFloor2';
 
 
-const GroundFloor = ({ onBack }) => {
+const GroundFloor1 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'There are a lot of rooms, I’m going to look at all with so much attention.' },
-    { quemfala: 'Esquerda', fala: 'Why are all of the spaces empty? I almost finished, and I didn’t find any sign! No steps in the dusty, no furniture or any kind of thing that could hide something...' },
-    { quemfala: 'Esquerda', fala: 'What’s happening to me? Have I missed some hint? Have I come to the wrong floriculture? Have I become bad at the only good thing that I’m left with?' },
-    { quemfala: 'Esquerda', fala: 'Stop thinking about this, focus because there’s still one more room. MUST have something there.' }
+    { quemfala: 'Esquerda', fala: "HERE'S A CARPET" },
+    { quemfala: 'Esquerda', fala: 'Why did I scream? I can’t show that I’m here. What if the bad guy is still here?' },
+    { quemfala: 'Esquerda', fala: 'NOTHING? YOU\'VE GOT TO BE KIDDING ME. Calm down, Duncan, you might have let something pass, but what? That frame... yeah, might be it, it’s big enough to hide something, how didn’t I thought about it before?' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
@@ -25,7 +24,7 @@ const GroundFloor = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<GroundFloor1 />);
+        setNextScene(<GroundFloor2 />);
       }, 500);
     }
   };
@@ -67,4 +66,4 @@ const GroundFloor = ({ onBack }) => {
   );
 };
 
-export default GroundFloor;
+export default GroundFloor1;

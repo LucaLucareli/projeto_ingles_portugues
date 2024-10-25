@@ -3,6 +3,7 @@ import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
 import CaseBackground from './assets/backgrounds/Lugar.png';
 import DuncanImage from './assets/Ford/Fordz.png'
+import SusanImage from './assets/Susan/Susan.png'
 import NotEnteredTheBakeryContinuaPadariaEscolha from './NotEnteredTheBakeryContinuaPadariaEscolha';
 
 const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
@@ -71,7 +72,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         }} 
       />
       <img 
-        src={textCompleted ? DuncanImage : ""} 
+        src={textCompleted ? DuncanImage : SusanImage} 
         alt="Bill" 
         style={{ 
           position: 'absolute', 

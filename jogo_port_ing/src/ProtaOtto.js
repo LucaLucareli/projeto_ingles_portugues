@@ -23,10 +23,10 @@ const ProtaOtto = () => {
   const handleSelection = (choiceIndex) => {
     if (choiceIndex === 0) {
       // Altera o estado para navegar para CharlieScene
-      setCurrentScene('Entered the bakery');
+      setCurrentScene('Enter the bakery');
     } else if (choiceIndex === 1) {
       // Altera o estado para navegar para EmmaScene
-      setCurrentScene('Did not enter bakery');
+      setCurrentScene('Do not enter bakery');
     }
     setChoiceMade(true);
   };
@@ -36,11 +36,11 @@ const ProtaOtto = () => {
   ];
 
   // Renderização condicional com base no estado currentScene
-  if (currentScene === 'Entered the bakery') {
+  if (currentScene === 'Enter the bakery') {
     return <EnteredTheBakery />;
   }
   
-  if (currentScene === 'Did not enter bakery') {
+  if (currentScene === 'Do not enter bakery') {
     return <NotEnteredTheBakery />; 
   }
 
@@ -81,7 +81,7 @@ const ProtaOtto = () => {
           {textCompleted && !choiceMade && (
             <>
               <ArrowSelection 
-                phrases={['Did not enter bakery', 'Entered the bakery']} 
+                phrases={['Do not enter bakery', 'Enter the bakery']} 
                 onSelection={handleSelection} 
                 disableNavigation={false} 
               />

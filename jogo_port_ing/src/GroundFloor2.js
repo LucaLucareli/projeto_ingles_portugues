@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
 // import andarVazio from './assets/backgrounds/andarVazio.png'; // Sala vazia
-import AndarTapete from './assets/backgrounds/andarVazio.png'; // Sala com tapete
-//import portaAberta from './assets/backgrounds/portaAberta.png'; // Porta aberta
-// import DescobertaDoCorpo from './assets/backgrounds/AssinaturaBill.png'; // Descoberta do corpo
-import GroundFloor1 from './GroundFloor1';
+// import AndarTapete from './assets/backgrounds/andar.png'; // Sala com tapete
+import portaAberta from './assets/backgrounds/portaAberta.png'; // Porta aberta
+//import DescobertaDoCorpo from './assets/backgrounds/AssinaturaBill.png'; // Descoberta do corpo
+import GroundFloor3 from './GroundFloor3';
 
 
-const GroundFloor = ({ onBack }) => {
+const GroundFloor2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'There are a lot of rooms, I’m going to look at all with so much attention.' },
-    { quemfala: 'Esquerda', fala: 'Why are all of the spaces empty? I almost finished, and I didn’t find any sign! No steps in the dusty, no furniture or any kind of thing that could hide something...' },
-    { quemfala: 'Esquerda', fala: 'What’s happening to me? Have I missed some hint? Have I come to the wrong floriculture? Have I become bad at the only good thing that I’m left with?' },
-    { quemfala: 'Esquerda', fala: 'Stop thinking about this, focus because there’s still one more room. MUST have something there.' }
+    { quemfala: 'Esquerda', fala: 'I knew that I would find something here. But the little door is closed, why didn’t I bring my tools?' },
+    { quemfala: 'Esquerda', fala: 'What if I punch it...? Look, it worked, and the rust helped me.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
@@ -25,7 +23,7 @@ const GroundFloor = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<GroundFloor1 />);
+        setNextScene(<GroundFloor3 />);
       }, 500);
     }
   };
@@ -36,7 +34,7 @@ const GroundFloor = ({ onBack }) => {
 
   return (
     <div style={{ 
-      backgroundImage: `url(${AndarTapete})`, 
+      backgroundImage: `url(${portaAberta})`, 
       backgroundSize: 'cover', 
       height: '100vh', 
       color: '#fff', 
@@ -67,4 +65,4 @@ const GroundFloor = ({ onBack }) => {
   );
 };
 
-export default GroundFloor;
+export default GroundFloor2;
