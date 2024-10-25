@@ -45,7 +45,7 @@ const DesvendandoOQueAconteceu = ({ onBack }) => {
       overflow: 'hidden'
     }}>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>Duncan, intrigued, reopens the investigations        </p>
+        <p style={{background: "black"}}>➞ Duncan, intrigued, reopens the investigations        </p>
       </div>
       <img 
         src={DuncanImage} 

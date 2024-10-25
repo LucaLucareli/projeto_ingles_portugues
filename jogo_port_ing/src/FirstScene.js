@@ -20,7 +20,7 @@ const FirstScene = ({ onBack }) => {
       {!showNextScene ? (
         <>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-            <p style={{background: "black"}}>Getting ready in your room to go to work</p>
+            <p style={{background: "black"}}>➞  Getting ready in your room to go to work</p>
           </div>
           <img 
             src={DuncanImage} 

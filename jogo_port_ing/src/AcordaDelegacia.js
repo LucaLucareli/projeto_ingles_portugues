@@ -40,7 +40,7 @@ const AcordaDelegacia = ({ onBack }) => {
       overflow: 'hidden'
     }}>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>The next day he wakes up at his office desk at the police station. Once he's used to it, he started to work normally.
+        <p style={{background: "black"}}>➞ The next day he wakes up at his office desk at the police station. Once he's used to it, he started to work normally.
         </p>
       </div>
       <img 

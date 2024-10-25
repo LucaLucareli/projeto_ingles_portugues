@@ -51,10 +51,10 @@ const ProtaOtto = () => {
           {!textCompleted && (
             <>
                 <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-                <p style={{background: "black"}}>Upon realizing that Duncan doesn't remember, he begins to explain...
+                <p style={{background: "black"}}>➞ Upon realizing that Duncan doesn't remember, he begins to explain...
                 </p>
                 <br/>
-                <p style={{background: "black"}}>
+                <p style={{background: "black"}}>➞ 
                 (The player now controls Otto and can choose his actions.)
                 </p>
               </div>

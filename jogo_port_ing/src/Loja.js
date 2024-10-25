@@ -14,7 +14,7 @@ const Loja = ({ onBack }) => {
   ]);
 
   const newDialogues = [
-    { quemfala: 'Esquerda', fala: "That information didn't get me anywhere... I'll keep walking and think of something better." },
+    { quemfala: 'Esquerda', fala: "That information didn't get me anywhere... I'll keep walking and think of something better." }
   ];
 
   const [nextScene, setNextScene] = useState(null);
@@ -47,7 +47,7 @@ const Loja = ({ onBack }) => {
     }}>
 
 <div style={{ padding: '10px', fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>Continuing down the street, he finds a 24-hour convenience store. Upon entering the store, he asks a few questions.
+        <p style={{background: "black"}}>➞ Continuing down the street, he finds a 24-hour convenience store. Upon entering the store, he asks a few questions.
         </p>
       </div>
       <img 

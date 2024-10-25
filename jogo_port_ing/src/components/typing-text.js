@@ -24,7 +24,7 @@ const TypingText = ({ text = '', onComplete }) => {
         setIsCompleted(true);
         if (onComplete) onComplete(); // Notifica que o texto terminou de ser exibido
       }
-    }, 5); // Atraso de 50ms entre cada letra
+    }, 85); // Atraso de 50ms entre cada letra
 
     return () => clearTimeout(timeout);
   }, [currentIndex, text, isCompleted]);

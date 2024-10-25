@@ -38,7 +38,7 @@ const CaseDetailsScene = () => {
 
   const duncanDialogue = [
     { quemfala: 'Esquerda', fala: "Let’s start the investigation" },
-    { quemfala: 'Esquerda', fala: "Hello Girls, how are you doing? I know it’s scary to be in a police station, but it will be fast, also you will help your friend." }
+    { quemfala: 'Esquerda', fala: "Hello, girls, how are you doing? I know it’s scary to be in a police station, but it will be fast, also you will help your friend." }
   ];
 
   // Renderização condicional com base no estado currentScene

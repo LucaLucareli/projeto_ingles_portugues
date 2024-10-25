@@ -109,9 +109,9 @@ const BarCena2 = ({ onBack }) => {
 
 {!memoryUnlocked && (
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>Walking, Duncan looks at the bar and remembers
+        <p style={{background: "black"}}>➞ Walking, Duncan looks at the bar and remembers
         </p>
-        <p style={{background: "black"}}>that night, after losing another case to Ford and, despite not liking it, he decides to drink to clear his head.
+        <p style={{background: "black"}}>➞ that night, after losing another case to Ford and, despite not liking it, he decides to drink to clear his head.
         </p>
       </div>
       )}

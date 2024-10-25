@@ -49,7 +49,7 @@ const Biblioteca = ({ onBack }) => {
     }}>
       {!textCompleted && (
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-              <p style={{background: "black"}}>Duncan goes to the library and tries to retrace the girl's steps.</p>
+              <p style={{background: "black"}}>➞ Duncan goes to the library and tries to retrace the girl's steps.</p>
             </div>
       )}
       <img 

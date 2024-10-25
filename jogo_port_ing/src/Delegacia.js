@@ -45,7 +45,7 @@ const Delegacia = ({ onBack }) => {
       overflow: 'hidden'
     }}>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-            <p style={{background: "black"}}>He arrived at the police station and called Mrs. Charles.</p>
+            <p style={{background: "black"}}>➞ He arrived at the police station and called Mrs. Charles.</p>
           </div>
       <img 
         src={DuncanImage} 

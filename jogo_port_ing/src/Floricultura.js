@@ -56,11 +56,11 @@ const Floricultura = () => {
           {!textCompleted && (
             <>
     <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-                <p style={{background: "black"}}>Duncan reaches the corner and comes across an abandoned building.
+                <p style={{background: "black"}}>➞ Duncan reaches the corner and comes across an abandoned building.
                 </p>
-                <p style={{background: "black"}}> He checks the doors and they are locked, which would make the investigation much more difficult.
+                <p style={{background: "black"}}>➞  He checks the doors and they are locked, which would make the investigation much more difficult.
                 </p>
-                <p style={{background: "black"}}>
+                <p style={{background: "black"}}>➞ 
                 Duncan decides to look for a new entrance and finds an iron door at the back of the building. Maybe a crowbar will do the trick.
                 </p>
               </div>

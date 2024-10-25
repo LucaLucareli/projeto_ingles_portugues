@@ -60,7 +60,7 @@ const EmmaScene = ({ onBack, onNavigate }) => {
       boxSizing: 'border-box' 
     }}>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>The investigation begins by talking to the girl's friends who accompanied her that night</p>
+        <p style={{background: "black"}}>➞ The investigation begins by talking to the girl's friends who accompanied her that night</p>
       </div>
 
       <img 

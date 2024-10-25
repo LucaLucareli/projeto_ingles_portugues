@@ -47,7 +47,7 @@ const FalandoSobreMorte = ({ onBack }) => {
       overflow: 'hidden'
     }}>
             <div style={{ padding: '150px 30px 30px', fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>Duncan tells Charles about his daughter's death, leaving him in shock.</p>
+        <p style={{background: "black"}}>➞ Duncan tells Charles about his daughter's death, leaving him in shock.</p>
       </div>
       <img 
         src={DuncanImage} 

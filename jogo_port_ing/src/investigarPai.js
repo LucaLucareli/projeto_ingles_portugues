@@ -16,12 +16,10 @@ const InvestigarPai = ({ onBack }) => {
     { quemfala: 'Direita', fala: "I'm a very busy man, I don't stay much at home, but she looked all right." },
     { quemfala: 'Esquerda', fala: "You're a very important man, do you think anyone could be angry with you and wanted to take revenge?" },
     { quemfala: 'Direita', fala: "I know that a lot of people don't like me, but I believe there isn't anyone who could do such a thing." },
-    { quemfala: 'Esquerda', fala: "Alright. That's all for now, Mr. Charles. Thank you for your cooperation." }
+    { quemfala: 'Esquerda', fala: "Alright. That's all for now, Mr. Charles. Thank you for your cooperation." },
+    { quemfala: 'Esquerda', fala: "Something about him isn't right, I think I've seen this man before. Maybe I'm just being paranoid... or maybe there's more that I don't know." }
   ]);
 
-  const newDialogues = [
-    { quemfala: 'Esquerda', fala: "Something about him isn't right, I think I've seen this man before. Maybe I'm just being paranoid... or maybe there's more that I don't know." },
-  ];
   
   const [nextScene, setNextScene] = useState(null); // Estado para gerenciar a transição de cena
 
@@ -29,7 +27,7 @@ const InvestigarPai = ({ onBack }) => {
     if (!textCompleted) {
       setTextCompleted(true); // Marca o texto como completado
       setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]); // Altera para os novos diálogos após um pequeno delay
+        setDialogues(prevDialogues => [...prevDialogues]); // Altera para os novos diálogos após um pequeno delay
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
@@ -54,7 +52,7 @@ const InvestigarPai = ({ onBack }) => {
       boxSizing: 'border-box' 
     }}>
       <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-        <p style={{background: "black"}}>Meeting with the victim's father at the police station.</p>
+        <p style={{background: "black"}}>➞ Meeting with the victim's father at the police station.</p>
       </div>
       <img 
         src={DuncanImage} 

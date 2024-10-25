@@ -53,10 +53,10 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       overflow: 'hidden'
     }}>
                           <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-                <p style={{background: "black"}}>They returned to the present.
+                <p style={{background: "black"}}>➞ They returned to the present.
                 </p>
                 <br/>
-                <p style={{background: "black"}}>
+                <p style={{background: "black"}}>➞ 
                 (The player now controls Duncan and can choose his actions.)
                 </p>
               </div>
