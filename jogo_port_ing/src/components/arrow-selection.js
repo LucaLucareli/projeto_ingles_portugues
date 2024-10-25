@@ -66,7 +66,7 @@ const ArrowSelection = ({ phrases, onSelection, disableNavigation }) => {
                 />
               )}
             </span>
-            <span>{phrase}</span>
+            <span style={{ fontSize: "33px" }}>{phrase}</span>
           </div>
         ))}
       </div>
