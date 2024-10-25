@@ -95,8 +95,8 @@ const MaisInformacoesCaso = () => {
         </>
       ) : (
         <>
-          <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-            <p>When opening the case files he finds a new folder. Yes, Ford is on this case too, unfortunately for him, his biggest rival is investigating the same crime.
+          <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+            <p style={{background: "black"}}>When opening the case files he finds a new folder. Yes, Ford is on this case too, unfortunately for him, his biggest rival is investigating the same crime.
             </p>
           </div>
           {!textCompleted && (

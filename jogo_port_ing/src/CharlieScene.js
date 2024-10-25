@@ -58,8 +58,8 @@ const CharlieScene = ({ onBack }) => {
       padding: '20px',
       boxSizing: 'border-box' 
     }}>
-    <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>The investigation begins by talking to the girl's friends who accompanied her that night</p>
+    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>The investigation begins by talking to the girl's friends who accompanied her that night</p>
       </div>
       <img 
         src={DuncanImage} 

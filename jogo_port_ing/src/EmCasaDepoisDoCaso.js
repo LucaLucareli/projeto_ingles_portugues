@@ -39,12 +39,12 @@ const EmCasaDepoisDoCaso = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
-   <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-      <p>After a long day, Duncan goes home, takes a shower and goes to sleep immediately. 
+   <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+      <p style={{background: "black"}}>After a long day, Duncan goes home, takes a shower and goes to sleep immediately. 
       </p>
-      <p>In the middle of the night, he wakes up thinking that if he had drunk coffee, he would have slept straight away.
+      <p style={{background: "black"}}>In the middle of the night, he wakes up thinking that if he had drunk coffee, he would have slept straight away.
       </p>
-      <p>He goes downstairs, drinks two cups of coffee and goes back to bed.        
+      <p style={{background: "black"}}>He goes downstairs, drinks two cups of coffee and goes back to bed.        
       </p>
       </div>
       <img 

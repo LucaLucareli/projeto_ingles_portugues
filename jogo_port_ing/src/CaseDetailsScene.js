@@ -54,7 +54,7 @@ const CaseDetailsScene = () => {
     <div style={{ backgroundImage: `url(${CaseBackground})`, backgroundSize: 'cover', height: '100vh', color: '#fff', position: 'relative' }}>
       {!showDuncanText ? (
         <>
-          <div style={{ padding: '30px', fontSize: "25px" }}>
+          <div style={{ padding: "30px", fontSize: "30px" }}>
             <h2>Case Details</h2>
             <p>"Here is presented the case file of the daughter of ..."</p>
             <p style={{ fontStyle: 'italic', color: '#fff' }}>{"Player chooses in order which girls to interview."}</p>

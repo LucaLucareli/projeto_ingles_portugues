@@ -112,7 +112,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '20px',
+    fontSize: "30px",
   },
   textBlock: {
     width: '1220px',
@@ -123,7 +123,7 @@ const styles = {
     background: 'rgba(21, 14, 14, 0.80)', // Fundo do bloco de texto
     padding: '15px',
     color: '#fff',
-    fontSize: '16px',
+    fontSize: "30px",
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -131,7 +131,7 @@ const styles = {
   },
   text: {
     color: '#fff', // Cor do texto
-    fontSize: '16px',
+    fontSize: "30px",
   },
   arrowContainer: {
     position: 'absolute',
@@ -140,7 +140,7 @@ const styles = {
     cursor: 'pointer',
   },
   arrow: {
-    fontSize: '24px',
+    fontSize: "30px",
     color: '#fff', // Cor branca
     transition: 'color 0.3s ease',
   },

@@ -56,11 +56,11 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
           {!textCompleted && (
             <>
 
-<div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-                      <p>
+<div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+                      <p style={{background: "black"}}>
                       The two are walking towards the coffee shop, and they pass through an alley. They hear a strange noise coming from this alley. 
                       </p>
-                      <p>
+                      <p style={{background: "black"}}>
                       As Duncan is always attentive to these details, he stays alert and thinks about investigating.
                       </p>
 
