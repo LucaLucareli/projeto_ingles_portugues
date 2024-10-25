@@ -48,8 +48,8 @@ const Biblioteca = ({ onBack }) => {
       boxSizing: 'border-box' 
     }}>
       {!textCompleted && (
-   <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-              <p>Duncan goes to the library and tries to retrace the girl's steps.</p>
+   <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+              <p style={{background: "black"}}>Duncan goes to the library and tries to retrace the girl's steps.</p>
             </div>
       )}
       <img 
@@ -80,7 +80,7 @@ const Biblioteca = ({ onBack }) => {
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
           textAlign: 'center', // Centraliza o texto
-          fontSize: '30px'
+          fontSize: "30px"
         }}>
           Unlocked Memory: 
           Always when Duncan needs to follow the steps of someone, he remembers his childhood, when he played Detective with his brother.

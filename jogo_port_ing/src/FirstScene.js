@@ -19,8 +19,8 @@ const FirstScene = ({ onBack }) => {
     <div style={{ backgroundImage: `url(${QuartoDuncan})`, backgroundSize: 'cover', height: '100vh', color: '#fff', position: 'relative' }}>
       {!showNextScene ? (
         <>
-   <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-            <p>Getting ready in your room to go to work</p>
+   <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+            <p style={{background: "black"}}>Getting ready in your room to go to work</p>
           </div>
           <img 
             src={DuncanImage} 

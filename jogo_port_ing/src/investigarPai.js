@@ -53,8 +53,8 @@ const InvestigarPai = ({ onBack }) => {
       padding: '20px',
       boxSizing: 'border-box' 
     }}>
-      <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>Meeting with the victim's father at the police station.</p>
+      <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>Meeting with the victim's father at the police station.</p>
       </div>
       <img 
         src={DuncanImage} 

@@ -46,8 +46,8 @@ const FalandoSobreMorte = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
-            <div style={{ padding: '150px 30px 30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>Duncan tells Charles about his daughter's death, leaving him in shock.</p>
+            <div style={{ padding: '150px 30px 30px', fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>Duncan tells Charles about his daughter's death, leaving him in shock.</p>
       </div>
       <img 
         src={DuncanImage} 
@@ -87,7 +87,7 @@ const FalandoSobreMorte = ({ onBack }) => {
           borderRadius: '10px', // Borda arredondada para um visual mais suave
           maxWidth: '80%', // Limita a largura do texto
           textAlign: 'center', // Centraliza o texto
-          fontSize: '30px'
+          fontSize: "30px"
         }}>
           Unlocked Memory: 
           Duncan remembers when he was a little kid and his parents was teaching German to him, when Germany was fine whitout the war.

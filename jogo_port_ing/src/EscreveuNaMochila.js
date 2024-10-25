@@ -32,7 +32,7 @@ const EscreveuNaMochila = () => {
     <div style={{ backgroundImage: `url(${CaseBackground})`, backgroundSize: 'cover', height: '100vh', color: '#fff', position: 'relative' }}>
       {!showDuncanText ? (
         <>
-          <div style={{ padding: '30px', fontSize: "25px" }}>
+          <div style={{ padding: "30px", fontSize: "30px" }}>
             <h2>Ford Notes</h2>
             <p>Notes that ford took about that case</p>
             <p style={{ fontStyle: 'italic', color: '#fff' }}>{"He can Finaly trespass that dirty Ford"}</p>

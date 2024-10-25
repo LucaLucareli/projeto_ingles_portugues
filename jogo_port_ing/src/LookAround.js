@@ -42,13 +42,13 @@ const LookAround = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
-              <div style={{ padding: '30px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>Duncan hears a noise coming from a dumpster and, upon investigating, realizes it's just a mouse.
+              <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>Duncan hears a noise coming from a dumpster and, upon investigating, realizes it's just a mouse.
         </p>
-        <p>
+        <p style={{background: "black"}}>
         When pushing the bucket, he discovers a hidden wooden trapdoor.
         </p>
-        <p>
+        <p style={{background: "black"}}>
         With the flashlight, he goes down a dark corridor and finds a staircase, which takes him inside the abandoned building.
         </p>
       </div>

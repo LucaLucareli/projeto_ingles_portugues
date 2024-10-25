@@ -46,8 +46,8 @@ const Loja = ({ onBack }) => {
       overflow: 'hidden'
     }}>
 
-<div style={{ padding: '10px', fontSize: "25px", color: "white", textShadow: "1px 0 red, -1px 0 red, 0 1px red, 0 -1px red" }}>
-        <p>Continuing down the street, he finds a 24-hour convenience store. Upon entering the store, he asks a few questions.
+<div style={{ padding: '10px', fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>Continuing down the street, he finds a 24-hour convenience store. Upon entering the store, he asks a few questions.
         </p>
       </div>
       <img 
