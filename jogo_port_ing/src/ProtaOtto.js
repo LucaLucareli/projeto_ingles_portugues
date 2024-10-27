@@ -81,7 +81,7 @@ const ProtaOtto = () => {
           {textCompleted && !choiceMade && (
             <>
               <ArrowSelection 
-                phrases={['Do not enter bakery', 'Enter the bakery']} 
+                phrases={['Enter the bakery', 'Do not enter bakery']} 
                 onSelection={handleSelection} 
                 disableNavigation={false} 
               />

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import DuncanImage from './assets/duncan/Duncan.png';
-import CaseBackground from './assets/backgrounds/quarto.png';
-import EmCasaDepoisDoCaso2 from './EmCasaDepoisDoCaso2';
+import CharlesImage from './assets/Charles/Charles.png';
+import CaseBackground from './assets/backgrounds/delegacia.png';
+import FalandoSobreMorte3 from './FalandoSobreMorte3'
 
-const EmCasaDepoisDoCaso = ({ onBack }) => {
+const FalandoSobreMorte2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Finally at home, I’ll take a shower and sleep...' },
+    { quemfala: 'Esquerda', fala: 'Mr. Charles was very angry, it makes him more suspect than he was... I think listening won\'t be that bad.' },
   ]);
 
   const [nextScene, setNextScene] = useState(null);
@@ -18,7 +19,7 @@ const EmCasaDepoisDoCaso = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<EmCasaDepoisDoCaso2 />);
+        setNextScene(<FalandoSobreMorte3 />);
       }, 500);
     }
   };
@@ -60,4 +61,4 @@ const EmCasaDepoisDoCaso = ({ onBack }) => {
   );
 };
 
-export default EmCasaDepoisDoCaso;
+export default FalandoSobreMorte2;

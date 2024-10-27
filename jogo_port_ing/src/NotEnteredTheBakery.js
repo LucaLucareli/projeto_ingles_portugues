@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/rua.png';
-import NotEnteredTheBakeryContinua from './NotEnteredTheBakeryContinua';
+import CaseBackground from './assets/backgrounds/CasaOtto.png';
+import NotEnteredTheBakery2 from './NotEnteredTheBakery2';
 import CedricImage from './assets/Cedric/Cedric.png'
-import DuncanImage from './assets/duncan/duncank.png'
 
 const NotEnteredTheBakery = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Direita', fala: 'I’m...going to die... but I don’t...  regret killing this bitch that you call mother...' },
   ]);
-
-    const newDialogues = [
-      { quemfala: 'Direita', fala: 'YOU’RE A MONSTER! I’LL KILL YOU!' },
-      { quemfala: 'Esquerda', fala: 'Duncan, DON’T DO THIS!' },
-      { quemfala: 'Esquerda', fala: 'He deserved it...' },
-      { quemfala: 'Direita', fala: 'You killed him... What is happening here??' },
-      { quemfala: 'Esquerda', fala: 'I don’t know, but I don’t want you to be the next, so it’s better you get out.' },
-      { quemfala: 'Direita', fala: 'What? Get out?' }
-    ];
   
 
   const [nextScene, setNextScene] = useState(null);
@@ -28,11 +18,11 @@ const NotEnteredTheBakery = ({ onBack }) => {
     if (!textCompleted) {
       setTextCompleted(true); // Marca o texto como completado
       setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues, ...newDialogues]); // Altera para os novos diálogos após um pequeno delay
+        setDialogues(prevDialogues => [...prevDialogues]); // Altera para os novos diálogos após um pequeno delay
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinua />);
+        setNextScene(<NotEnteredTheBakery2 />);
       }, 500);
     }
   };
@@ -52,6 +42,11 @@ const NotEnteredTheBakery = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+
+<div style={{ padding: '30px 30px 30px', fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>➞ Otto goes his normal way and arrives home.</p>
+      </div>
+
       <img 
         src={OttoImage} 
         alt="Otto" 
@@ -64,13 +59,13 @@ const NotEnteredTheBakery = ({ onBack }) => {
         }} 
       />
       <img 
-        src={textCompleted ? DuncanImage : CedricImage} 
-        alt={textCompleted ? "Duncan" : "Cedric"} 
+        src={CedricImage} 
+        alt={"Cedric"} 
         style={{ 
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: textCompleted ? "500px" : '300px',
+          width: '300px',
           height: 'auto' 
         }} 
       />
@@ -80,7 +75,7 @@ const NotEnteredTheBakery = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Otto"
-        rightName= {textCompleted ? "Duncan" : "Cedric"}
+        rightName= {"Cedric"}
       />
     </div>
   );

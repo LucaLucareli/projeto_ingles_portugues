@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/padaria.png';
+import CaseBackground from './assets/backgrounds/rua.png';
 import DuncanImage from './assets/Ford/Fordz.png'
-import SusanImage from './assets/Susan/Susan.png'
-import NotEnteredTheBakeryContinuaPadaria2 from './NotEnteredTheBakeryContinuaPadaria2';
+import NotEnteredTheBakeryContinuaPadariaEscolha from './NotEnteredTheBakeryContinuaPadariaEscolha';
 
-const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
+const NotEnteredTheBakeryContinuaPadaria2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Baby, I don’t know what happened in my house.. I need you!' },
-    { quemfala: 'Direita', fala: 'Ok, calm down, you can stay at my place for the time you need.' },
+    { quemfala: 'Direita', fala: 'I’m a monster... I did all of that bad things... I’m the Serial Killer.' },
+    { quemfala: 'Esquerda', fala: 'Yeah, I don’t know what happen, but you kind looked like another person...' },
+    { quemfala: 'Direita', fala: 'Ok, maybe it will help a bit. Wait, you said that I told you my name was Ford?' },
+    { quemfala: 'Esquerda', fala: 'That’s why you’re take a break.' },
+    { quemfala: 'Direita', fala: 'I’m also him... I don’t know my self anymore.' }
   ]);
   
 
@@ -24,7 +26,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinuaPadaria2 />);
+        setNextScene(<NotEnteredTheBakeryContinuaPadariaEscolha />);
       }, 500);
     }
   };
@@ -44,6 +46,14 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+                  <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
+                <p style={{background: "black"}}>➞ They returned to the present.
+                </p>
+                <br/>
+                <p style={{background: "black"}}>➞ 
+                (The player now controls Duncan and can choose his actions.)
+                </p>
+              </div>
       <img 
         src={OttoImage} 
         alt="Otto" 
@@ -56,8 +66,8 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         }} 
       />
       <img 
-        src={SusanImage} 
-        alt="Susan" 
+        src={DuncanImage } 
+        alt="Bill" 
         style={{ 
           position: 'absolute', 
           right: '20px',
@@ -72,10 +82,10 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Otto"
-        rightName= {"Susan"}
+        rightName= {"Duncan"}
       />
     </div>
   );
 };
 
-export default NotEnteredTheBakeryContinuaPadaria;
+export default NotEnteredTheBakeryContinuaPadaria2;

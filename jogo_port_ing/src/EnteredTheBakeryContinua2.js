@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/padaria.png';
-import DuncanImage from './assets/Ford/Fordz.png'
-import SusanImage from './assets/Susan/Susan.png'
-import NotEnteredTheBakeryContinuaPadaria2 from './NotEnteredTheBakeryContinuaPadaria2';
+import BillImage from  './assets/Bill/Bill.png'
+import CaseBackground from './assets/backgrounds/CasaOtto.png';
+import EnteredTheBakeryContinuaVoltaPadaria from './EnteredTheBakeryContinuaVoltaPadaria'
 
-const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
+const EnteredTheBakeryContinua2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Baby, I don’t know what happened in my house.. I need you!' },
-    { quemfala: 'Direita', fala: 'Ok, calm down, you can stay at my place for the time you need.' },
+    { quemfala: 'Direita', fala: 'Go away and don’t come back... I don’t want you to be the next.' },
+    { quemfala: 'Esquerda', fala: 'Duncan, what are you talking about?' },
+    { quemfala: 'Direita', fala: 'I’M BILL, AND I’M SAYING GET OUT, I DON’T WANT TO HURT YOU!' },
+    { quemfala: 'Esquerda', fala: 'My brother is a monster, he killed both, but why? If it was just Cedric, it would make sense, but both? I don’t even recognize my brother anymore...' },
   ]);
-  
 
   const [nextScene, setNextScene] = useState(null);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
-      setTextCompleted(true); // Marca o texto como completado
-      setTimeout(() => {
-        setDialogues(prevDialogues => [...prevDialogues]); // Altera para os novos diálogos após um pequeno delay
-      }, 500); // Ajuste o tempo conforme necessário
+      setTextCompleted(true); // Marca os diálogos iniciais como completos
+      setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinuaPadaria2 />);
+        setNextScene(<EnteredTheBakeryContinuaVoltaPadaria />);
       }, 500);
     }
   };
@@ -44,6 +42,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+
       <img 
         src={OttoImage} 
         alt="Otto" 
@@ -56,13 +55,13 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         }} 
       />
       <img 
-        src={SusanImage} 
-        alt="Susan" 
+        src={BillImage} 
+        alt="Bill" 
         style={{ 
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '300px',
+          width: '350px',
           height: 'auto' 
         }} 
       />
@@ -72,10 +71,10 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Otto"
-        rightName= {"Susan"}
+        rightName="Bill"
       />
     </div>
   );
 };
 
-export default NotEnteredTheBakeryContinuaPadaria;
+export default EnteredTheBakeryContinua2;

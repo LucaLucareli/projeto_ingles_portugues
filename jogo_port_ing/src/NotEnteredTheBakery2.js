@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/padaria.png';
-import DuncanImage from './assets/Ford/Fordz.png'
-import SusanImage from './assets/Susan/Susan.png'
-import NotEnteredTheBakeryContinuaPadaria2 from './NotEnteredTheBakeryContinuaPadaria2';
+import CaseBackground from './assets/backgrounds/CasaOtto.png';
+import NotEnteredTheBakeryContinua from './NotEnteredTheBakeryContinua';
+import DuncanImage from './assets/duncan/duncank.png'
 
-const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
+const NotEnteredTheBakery2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Baby, I don’t know what happened in my house.. I need you!' },
-    { quemfala: 'Direita', fala: 'Ok, calm down, you can stay at my place for the time you need.' },
+    { quemfala: 'Direita', fala: 'YOU’RE A MONSTER! I’LL KILL YOU!' },
+    { quemfala: 'Esquerda', fala: 'Duncan, DON’T DO THIS!' },
+    { quemfala: 'Esquerda', fala: 'He deserved it...' },
+    { quemfala: 'Direita', fala: 'You killed him... What is happening here??' },
+    { quemfala: 'Esquerda', fala: 'I don’t know, but I don’t want you to be the next, so it’s better you get out.' },
+    { quemfala: 'Direita', fala: 'What? Get out?' }
   ]);
   
 
@@ -24,7 +27,7 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       }, 500); // Ajuste o tempo conforme necessário
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinuaPadaria2 />);
+        setNextScene(<NotEnteredTheBakeryContinua />);
       }, 500);
     }
   };
@@ -44,6 +47,11 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       boxSizing: 'border-box',
       overflow: 'hidden'
     }}>
+
+<div style={{ padding: '30px 30px 30px', fontSize: "30px", color: "white", width: "fit-content" }}>
+        <p style={{background: "black"}}>➞ Otto goes his normal way and arrives home.</p>
+      </div>
+
       <img 
         src={OttoImage} 
         alt="Otto" 
@@ -56,13 +64,13 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         }} 
       />
       <img 
-        src={SusanImage} 
-        alt="Susan" 
+        src={DuncanImage } 
+        alt={"Duncan" } 
         style={{ 
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '300px',
+          width: "500px",
           height: 'auto' 
         }} 
       />
@@ -72,10 +80,10 @@ const NotEnteredTheBakeryContinuaPadaria = ({ onBack }) => {
         texts={dialogues}
         onComplete={handleTextComplete}
         leftName="Otto"
-        rightName= {"Susan"}
+        rightName= {"Duncan"}
       />
     </div>
   );
 };
 
-export default NotEnteredTheBakeryContinuaPadaria;
+export default NotEnteredTheBakery2;

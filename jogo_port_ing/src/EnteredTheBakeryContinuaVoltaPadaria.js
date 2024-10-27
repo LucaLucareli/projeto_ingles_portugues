@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
 import SusanImage from './assets/Susan/Susan.png'
-import CaseBackground from './assets/backgrounds/loja.png';
+import CaseBackground from './assets/backgrounds/loja2.png';
 import EnteredTheBakeryContinuaVoltaPadariaCorversaDuncan from  './EnteredTheBakeryContinuaVoltaPadariaCorversaDuncan'
 
 const EnteredTheBakeryContinuaPadaria = ({ onBack }) => {
@@ -41,11 +41,7 @@ const EnteredTheBakeryContinuaPadaria = ({ onBack }) => {
       overflow: 'hidden'
     }}>
    <div style={{ padding: "30px", fontSize: "30px", color: "white", width: "fit-content" }}>
-                <p style={{background: "black"}}>➞ They returned to the present.
-                </p>
-                <br/>
-                <p style={{background: "black"}}>➞ 
-                (The player now controls Duncan and can choose his actions.)
+                <p style={{background: "black"}}>➞ Otto fled to the bakery
                 </p>
               </div>
               <img 

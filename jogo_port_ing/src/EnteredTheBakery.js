@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
 import SusanImage from './assets/Susan/Susan.png';
-import CaseBackground from './assets/backgrounds/rua.png';
+import CaseBackground from './assets/backgrounds/loja2.png';
 import EnteredTheBakeryContinua from './EnteredTheBakeryContinua'
 
 const EnteredTheBakery = ({ onBack }) => {

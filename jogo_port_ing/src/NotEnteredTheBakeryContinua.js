@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
-import CaseBackground from './assets/backgrounds/rua.png';
+import CaseBackground from './assets/backgrounds/CasaOtto.png';
 import BillImage from './assets/Bill/Bill.png'
 import NotEnteredTheBakeryContinuaPadaria from './NotEnteredTheBakeryContinuaPadaria';
 
