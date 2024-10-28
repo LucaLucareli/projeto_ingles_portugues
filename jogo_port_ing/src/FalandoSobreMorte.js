@@ -10,7 +10,7 @@ const FalandoSobreMorte = ({ onBack }) => {
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Direita', fala: 'Gosh, Who could be so cruel to do it to a person?' },
     { quemfala: 'Esquerda', fala: 'It was a Serial Killer called Bill, unfortunately we know just a little about him. We’re looking for him for years, but in his few and tragic appearances, he just let us with his name, “Bill” written on the floor with the blood of the victim.' },
-    { quemfala: 'Direita', fala: 'It can\'t go on like this, I\'m going to avenge my baby... I\'ll be right back, I just need to make a call.' },
+    { quemfala: 'Direita', fala: 'It can\'t go on like this, I\'m going to avenge my baby... I\'ll be right back, I just need to make one call.' },
     { quemfala: 'Esquerda', fala: 'Ok.' }
   ]);
 

@@ -14,7 +14,7 @@ const GroundFloor = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'There are a lot of rooms, I’m going to look at all with so much attention.' },
     { quemfala: 'Esquerda', fala: 'Why are all of the spaces empty? I almost finished, and I didn’t find any sign! No steps in the dusty, no furniture or any kind of thing that could hide something...' },
     { quemfala: 'Esquerda', fala: 'What’s happening to me? Have I missed some hint? Have I come to the wrong floriculture? Have I become bad at the only good thing that I’m left with?' },
-    { quemfala: 'Esquerda', fala: 'Stop thinking about this, focus because there’s still one more room. MUST have something there.' }
+    { quemfala: 'Esquerda', fala: 'Stop thinking about this, focus because there’s still one more room. There MUST have something there.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);

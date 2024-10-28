@@ -11,7 +11,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncan = ({ onBack }) => {
     { quemfala: 'Direita', fala: 'I’m a monster... I did all of that bad things... I’m the Serial Killer.' },
     { quemfala: 'Esquerda', fala: 'Calm down Duncan, I’m here, let’s go take a coffee to you think and talk about it.' },
     { quemfala: 'Direita', fala: 'Ok, maybe it will help a bit. Wait, you said that I told you my name was Ford?' },
-    { quemfala: 'Esquerda', fala: 'Yeah, I don’t know what happen, but you kind of looked like another person...' },
+    { quemfala: 'Esquerda', fala: 'Yeah, I don’t know what happened, but you kind of looked like another person...' },
     { quemfala: 'Direita', fala: 'I’m also him... I don’t know myself anymore.' },
     { quemfala: 'Esquerda', fala: 'That’s why you’re taking a break.' }
   ]);

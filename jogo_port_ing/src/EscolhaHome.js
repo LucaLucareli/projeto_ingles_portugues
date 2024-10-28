@@ -12,7 +12,7 @@ const EscolhaHome = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'Hello, good morning, Did you move recently?' },
     { quemfala: 'Direita', fala: 'Yes, me and my husband just moved on, we arrived here last night. Right now we are cleaning everything so we can bring our things. But why do you want to know it?' },
     { quemfala: 'Esquerda', fala: "I'm a detective, and I'm investigating a disappearance, I'd just to know if you saw some different movement around here these days." },
-    { quemfala: 'Direita', fala: "Like I said, I just moved on, in theses two days I didn't see anything suspicious." },
+    { quemfala: 'Direita', fala: "Like I said, I just moved in, in theses two days I didn't see anything suspicious." },
     { quemfala: 'Esquerda', fala: 'Ok, thanks for your help.' },
   ]);
 

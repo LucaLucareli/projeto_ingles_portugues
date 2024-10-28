@@ -33,8 +33,7 @@ const EnteredTheBakeryContinuaVoltaPadariaCorversaDuncanCafeteria = () => {
   };
 
   const duncanDialogue = [
-    { quemfala: 'Esquerda', fala: 'Did you listen it?' },
-    { quemfala: 'Direita', fala: 'That strange noise?' },
+    { quemfala: 'Esquerda', fala: 'Have you heard that strange noise?' },
     { quemfala: 'Esquerda', fala: 'Yes.' },
     
     { quemfala: 'Direita', fala: 'What should I do?' },

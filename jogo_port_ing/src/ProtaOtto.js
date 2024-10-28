@@ -26,13 +26,13 @@ const ProtaOtto = () => {
       setCurrentScene('Enter the bakery');
     } else if (choiceIndex === 1) {
       // Altera o estado para navegar para EmmaScene
-      setCurrentScene('Do not enter bakery');
+      setCurrentScene('Not enter bakery');
     }
     setChoiceMade(true);
   };
 
   const duncanDialogue = [
-    { quemfala: 'Esquerda', fala: "I’m a little late, because a promise to make the dinner today, but if I go to the bakery and buy some of those cookies for my Mother and Duncan?" },
+    { quemfala: 'Esquerda', fala: "I’m a little late. I had promised to make dinner today, what if I go to the bakery and buy some cookies for my Mother and Duncan?" },
   ];
 
   // Renderização condicional com base no estado currentScene
@@ -40,7 +40,7 @@ const ProtaOtto = () => {
     return <EnteredTheBakery />;
   }
   
-  if (currentScene === 'Do not enter bakery') {
+  if (currentScene === 'Not enter bakery') {
     return <NotEnteredTheBakery />; 
   }
 

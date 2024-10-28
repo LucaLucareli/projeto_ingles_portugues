@@ -7,7 +7,7 @@ import EmCasaDepoisDoCaso2 from './EmCasaDepoisDoCaso2';
 const EmCasaDepoisDoCaso = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Finally at home, I’ll take a shower and sleep...' },
+    { quemfala: 'Esquerda', fala: 'Finally home, I’ll take a shower and sleep...' },
   ]);
 
   const [nextScene, setNextScene] = useState(null);

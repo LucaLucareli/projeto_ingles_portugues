@@ -82,7 +82,7 @@ const FalandoSobreMorte3 = ({ onBack }) => {
           fontSize: "30px"
         }}>
           Unlocked Memory: 
-          Duncan remembers when he was a little kid and his parents was teaching German to him, when Germany was fine whitout the war.
+          Duncan remembers when he was a little kid and his parents were teaching German to him, when Germany was fine whitout the war.
         </p>
 
       {/* Diálogo inicial seguido pelos novos diálogos */}

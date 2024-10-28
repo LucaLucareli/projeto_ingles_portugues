@@ -8,6 +8,7 @@ import EnteredTheBakeryContinuaVoltaPadariaCorversaDuncan from  './EnteredTheBak
 const EnteredTheBakeryContinuaPadaria = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
+    { quemfala: 'Esquerda', fala: 'My brother is a monster, he killed both, but why? If it was just Cedric, it would make sense, but both? I don’t even recognize my brother anymore...' },
     { quemfala: 'Esquerda', fala: 'Baby, I don’t know what happened in my house... I need you!' },
     { quemfala: 'Direita', fala: 'Ok, calm down, you can stay at my place for the time you need.' }
   ]);
