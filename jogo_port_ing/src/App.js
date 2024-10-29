@@ -4,7 +4,7 @@ import FirstScene from './FirstScene'; // Componente da primeira cena
 import CreatorsScreen from './components/CreatorScreen'; // Componente da tela dos criadores
 import Video1 from './assets/begining.mp4';
 import Video2 from './assets/second_video.mp4'; // Segundo vídeo
-import PredioEscolhaEs from './NotEnteredTheBakeryContinuaPadariaEscolhaIgnore';
+import PredioEscolhaEs from './PredioEscolhaEs';
 import './App.css'; // Add a CSS file for custom styles
 import BgAudio from './assets/bg-music.mp3'
 

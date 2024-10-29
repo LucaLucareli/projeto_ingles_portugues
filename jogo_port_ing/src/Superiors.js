@@ -7,7 +7,7 @@ import GroundFloor from './GroundFloor'
 const Superiors = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Gosh, I looked very single room and all of them are only dusty rooms. At least I did some exercise. So let’s investigate the ground floor.' },
+    { quemfala: 'Esquerda', fala: 'Gosh, I searched in every single room and all of them are only dusty rooms. At least I did some exercise. So let’s investigate the ground floor.' },
   ]);
 
   const [nextScene, setNextScene] = useState(null);

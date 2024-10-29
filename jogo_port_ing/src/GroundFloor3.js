@@ -12,9 +12,9 @@ const GroundFloor3 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Esquerda', fala: 'What a dark place, I’ll to use my flashlight again... Let me see if have something in this little room...' },
-    { quemfala: 'Esquerda', fala: 'Damn, it\'s her... What did they do to her? When was it? The blood is already dry...' },
-    { quemfala: 'Esquerda', fala: 'I knew that I’d find her first, rather than Ford. Don’t think about it right now, Duncan, she’s dead in front of you. I’m going to call help.' },
-    { quemfala: 'Esquerda', fala: 'But who has made it? Can’t be him... “Bill”, he left his signature again.' }
+    { quemfala: 'Esquerda', fala: 'Damn, it\'s her... What have they done to her? When was it? The blood is already dry...' },
+    { quemfala: 'Esquerda', fala: 'I knew that I’d find her before Ford. Don’t think about it right now, Duncan, she’s dead in front of you. I’m going to call help.' },
+    { quemfala: 'Esquerda', fala: 'But who has done that? Again... “Bill”, he left his signature next to the body.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
