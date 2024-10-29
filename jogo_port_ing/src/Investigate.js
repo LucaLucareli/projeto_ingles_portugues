@@ -3,7 +3,7 @@ import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
 import duncanImage from './assets/Ford/Fordz.png'
 import CaseBackground from './assets/backgrounds/Lugar.png';
-import Fim from './Fim'
+import Investigate1 from './Investigate1'
 
 const Investigate = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -13,14 +13,8 @@ const Investigate = ({ onBack }) => {
     { quemfala: 'Direita', fala: 'Sh*t, he has a gun, I need to stop him, I’ll jump on him, so it will be harder for him to shoot me.' },
     { quemfala: 'Esquerda', fala: 'I need to do something... I’ll take this gun.' },
     { quemfala: 'Esquerda', fala: 'YOU LET MY BROTHER GO OR I’LL SHOOT YOU!' },
-    { quemfala: '???:', fala: 'Ok...' },
     { quemfala: 'Direita', fala: 'Thank you brother, it was amazing, I can deal from here.' },
     { quemfala: 'Esquerda', fala: 'You’ll do nothing, what’s your name guy?' },
-    { quemfala: '???:', fala: 'James.' },
-    { quemfala: 'Esquerda', fala: 'Ok, James, I’ll give you your gun back and pretend that I didn’t see you, if you pretend that didn’t see me too. Just let me go and you can do whatever you want with my brother.' },
-    { quemfala: '???:', fala: 'Ok.' },
-    { quemfala: 'Direita', fala: 'Otto, what are you doing?' },
-    { quemfala: 'Esquerda', fala: 'I’m doing justice for our parents that you killed, you’re a monster and deserve all the worst. Bye, and I hope to never see you again.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
@@ -31,7 +25,7 @@ const Investigate = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<Fim />);
+        setNextScene(<Investigate1 />);
       }, 500);
     }
   };

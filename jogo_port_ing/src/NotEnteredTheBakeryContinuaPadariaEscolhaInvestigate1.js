@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import TextSequence from './components/text-sequence';
-import OttoImage from './assets/Otto/Otto.png';
-import duncanImage from './assets/Ford/Fordz.png'
+import JamesImage from './assets/James/James.png'
+import duncanImage from './assets/Ford/Ford.png'
 import CaseBackground from './assets/backgrounds/Lugar.png';
-import NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1 from './NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1'
+import Fim from './Fim'
 
-const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
+const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Direita', fala: 'This sound is really weird. Otto stay here, I’ll take a look to check if everything is ok.' },
-    { quemfala: 'Direita', fala: 'The sound again...' },
-    { quemfala: 'Direita', fala: 'Sh*t, he has a gun, I need to stop him, I’ll jump on him, so it will be harder for him to shoot me.' },
-    { quemfala: 'Esquerda', fala: 'I need to do something... I’ll take this gun.' },
-    { quemfala: 'Esquerda', fala: 'YOU LET MY BROTHER GO OR I’LL SHOOT YOU.' },
+
+    { quemfala: 'Esquerda', fala: 'Thank you brother, it was amazing, I can deal from here.' },
+    { quemfala: 'Esquerda', fala: 'So, who are you? And what do you want?' },
+    { quemfala: 'Direita', fala: 'I wanted to kill you, you arrested my father...' },
+    { quemfala: 'Esquerda', fala: 'Charles has another child? I didn’t expect that, but anyway, you will be next to your dad in jail.' }
   ])
 
   const [nextScene, setNextScene] = useState(null);
@@ -23,7 +23,7 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1 />);
+        setNextScene(<Fim />);
       }, 500);
     }
   };
@@ -44,8 +44,8 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
       overflow: 'hidden'
     }}>
       <img 
-        src={OttoImage} 
-        alt="Otto" 
+        src={duncanImage} 
+        alt="Duncan" 
         style={{ 
           position: 'absolute', 
           left: '20px',
@@ -55,13 +55,13 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
         }} 
       />
       <img 
-        src={duncanImage} 
-        alt="Duncan" 
+        src={JamesImage} 
+        alt="James" 
         style={{ 
           position: 'absolute', 
           right: '20px',
           bottom: '0px',
-          width: '300px',
+          width: '280px',
           height: 'auto' 
         }} 
       />
@@ -70,11 +70,11 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
       <TextSequence 
         texts={dialogues}
         onComplete={handleTextComplete}
-        leftName="Otto"
-        rightName="Duncan"
+        leftName="Duncan"
+        rightName="???"
       />
     </div>
   );
 };
 
-export default NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate;
+export default NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1;

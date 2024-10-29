@@ -3,17 +3,14 @@ import TextSequence from './components/text-sequence';
 import OttoImage from './assets/Otto/Otto.png';
 import duncanImage from './assets/Ford/Fordz.png'
 import CaseBackground from './assets/backgrounds/Lugar.png';
-import NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1 from './NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1'
+import Fim from './Fim'
 
-const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
+const Investigate2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Direita', fala: 'This sound is really weird. Otto stay here, I’ll take a look to check if everything is ok.' },
-    { quemfala: 'Direita', fala: 'The sound again...' },
-    { quemfala: 'Direita', fala: 'Sh*t, he has a gun, I need to stop him, I’ll jump on him, so it will be harder for him to shoot me.' },
-    { quemfala: 'Esquerda', fala: 'I need to do something... I’ll take this gun.' },
-    { quemfala: 'Esquerda', fala: 'YOU LET MY BROTHER GO OR I’LL SHOOT YOU.' },
-  ])
+    { quemfala: 'Direita', fala: 'Otto, what are you doing?' },
+    { quemfala: 'Esquerda', fala: 'I’m doing justice for our parents that you killed, you’re a monster and deserve all the worst. Bye, and I hope to never see you again.' }
+  ]);
 
   const [nextScene, setNextScene] = useState(null);
 
@@ -23,7 +20,7 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
       setTimeout(() => {
-        setNextScene(<NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate1 />);
+        setNextScene(<Fim />);
       }, 500);
     }
   };
@@ -77,4 +74,4 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate = ({ onBack }) => {
   );
 };
 
-export default NotEnteredTheBakeryContinuaPadariaEscolhaInvestigate;
+export default Investigate2;
