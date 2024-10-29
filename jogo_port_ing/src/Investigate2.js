@@ -4,21 +4,25 @@ import OttoImage from './assets/Otto/Otto.png';
 import duncanImage from './assets/Ford/Fordz.png'
 import CaseBackground from './assets/backgrounds/Lugar.png';
 import Fim from './Fim'
+import Shot from './assets/shot.mp3'
 
 const Investigate2 = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
     { quemfala: 'Direita', fala: 'Otto, what are you doing?' },
-    { quemfala: 'Esquerda', fala: 'I’m doing justice for our parents that you killed, you’re a monster and deserve all the worst. Bye, and I hope to never see you again.' }
+    { quemfala: 'Esquerda', fala: 'I’m doing justice for my parents that you killed, you’re a monster and deserve all the worst. Bye, and I hope to never see you again.' }
   ]);
 
   const [nextScene, setNextScene] = useState(null);
+
+  const audio = new Audio(Shot);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
       setTextCompleted(true); // Marca os diálogos iniciais como completos
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
+      audio.play();
       setTimeout(() => {
         setNextScene(<Fim />);
       }, 500);
