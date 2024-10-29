@@ -24,7 +24,7 @@ const TypingText = ({ text = '', onComplete }) => {
         setIsCompleted(true);
         if (onComplete) onComplete(); // Notifica que o texto terminou de ser exibido
       }
-    }, 85); // Atraso de 85ms entre cada letra
+    }, 50); // Atraso de 50ms entre cada letra
 
     return () => clearTimeout(timeout);
   }, [currentIndex, text, isCompleted]);
@@ -56,7 +56,7 @@ const styles = {
     margin: '20px auto', // Centraliza horizontalmente
   },
   text: {
-    fontSize: '33px', // Fonte maior para melhor leitura
+    fontSize: "30px !important", // Fonte maior para melhor leitura
     lineHeight: '1.6',
     color: '#fff', // Mantém o texto branco
     fontFamily: 'Arial, sans-serif', // Fonte limpa e fácil de ler

@@ -121,3 +121,7 @@ video {
   object-fit: cover; /* Ensure the video covers the screen without distortion */
   background-color: black;
 }
+
+p {
+  font-size: 30px;
+}

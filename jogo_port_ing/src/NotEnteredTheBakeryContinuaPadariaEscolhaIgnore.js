@@ -4,6 +4,7 @@ import OttoImage from './assets/Otto/Otto.png';
 import duncanImage from './assets/Ford/Fordz.png'
 import CaseBackground from './assets/backgrounds/Lugar.png';
 import Fim from './Fim'
+import Ambulancia from './assets/ambulance.mp3'
 
 const NotEnteredTheBakeryContinuaPadariaEscolhaIgnore = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
@@ -11,15 +12,17 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaIgnore = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'Let’s ignore this sound, I already have a lot to worry.' },
     { quemfala: 'Direita', fala: 'Yeah, take a break.' },
   
-    { quemfala: 'Direita', fala: 'I think that someone who gets out of the alleyway is following us...' },
-    { quemfala: 'Direita', fala: 'He took a gun, RUN OTTO, RUN!' },
+    { quemfala: 'Direita', fala: 'I think someone that got out of the alleyway is following us...' },
+    { quemfala: 'Direita', fala: 'He has a gun, RUN OTTO, RUN!' },
     { quemfala: 'Esquerda', fala: 'Oh, my gosh.' },
-    { quemfala: 'Direita', fala: 'He’s away from us Otto. Will everything be ok...' },
+    { quemfala: 'Direita', fala: 'He’s away from us Otto. Everything is gonna be ok...' },
     { quemfala: 'Esquerda', fala: 'STOP DUNCAN, THE CAR!' },
   
     { quemfala: 'Direita', fala: '...' },
     { quemfala: 'Esquerda', fala: 'Duncan! Are you ok? WAKE UP BROTHER! SOMEONE HELP, PLEASE!!' }
   ]);
+
+  const audio = new Audio(Ambulancia);
 
   const [nextScene, setNextScene] = useState(null);
 
@@ -28,6 +31,7 @@ const NotEnteredTheBakeryContinuaPadariaEscolhaIgnore = ({ onBack }) => {
       setTextCompleted(true); // Marca os diálogos iniciais como completos
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
     } else {
+      audio.play();
       setTimeout(() => {
         setNextScene(<Fim />);
       }, 500);

@@ -11,7 +11,6 @@ const EnteredTheBakeryContinua2 = ({ onBack }) => {
     { quemfala: 'Direita', fala: 'Go away and don’t come back... I don’t want you to be the next.' },
     { quemfala: 'Esquerda', fala: 'Duncan, what are you talking about?' },
     { quemfala: 'Direita', fala: 'I’M BILL, AND I’M SAYING GET OUT, I DON’T WANT TO HURT YOU!' },
-    { quemfala: 'Esquerda', fala: 'My brother is a monster, he killed both, but why? If it was just Cedric, it would make sense, but both? I don’t even recognize my brother anymore...' },
   ]);
 
   const [nextScene, setNextScene] = useState(null);

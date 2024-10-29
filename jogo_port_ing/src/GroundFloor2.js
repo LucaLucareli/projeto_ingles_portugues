@@ -6,6 +6,7 @@ import DuncanImage from './assets/duncan/Duncan.png';
 import portaAberta from './assets/backgrounds/portaAberta.png'; // Porta aberta
 //import DescobertaDoCorpo from './assets/backgrounds/AssinaturaBill.png'; // Descoberta do corpo
 import GroundFloor3 from './GroundFloor3';
+import IronDoor from './assets/door.mp3'
 
 
 const GroundFloor2 = ({ onBack }) => {
@@ -15,12 +16,15 @@ const GroundFloor2 = ({ onBack }) => {
     { quemfala: 'Esquerda', fala: 'What if I punch it...? Look, it worked, and the rust helped me.' }
   ]);
 
+  const audio = new Audio(IronDoor);
+
   const [nextScene, setNextScene] = useState(null);
 
   const handleTextComplete = () => {
     if (!textCompleted) {
       setTextCompleted(true); // Marca os diálogos iniciais como completos
       setDialogues(prevDialogues => [...prevDialogues]); // Insere os novos diálogos
+      audio.play();
     } else {
       setTimeout(() => {
         setNextScene(<GroundFloor3 />);

@@ -4,19 +4,26 @@ import FirstScene from './FirstScene'; // Componente da primeira cena
 import CreatorsScreen from './components/CreatorScreen'; // Componente da tela dos criadores
 import Video1 from './assets/begining.mp4';
 import Video2 from './assets/second_video.mp4'; // Segundo vídeo
-import PredioEscolhaEs from './PredioEscolhaEs';
+import PredioEscolhaEs from './NotEnteredTheBakeryContinuaPadariaEscolhaIgnore';
 import './App.css'; // Add a CSS file for custom styles
+import BgAudio from './assets/bg-music.mp3'
 
 const App = () => {
   const [scene, setScene] = useState('start');
   const [isFirstVideoEnded, setIsFirstVideoEnded] = useState(false); // Track first video end
 
+  const audio = new Audio(BgAudio);
+  audio.volume = 0.5;
+  audio.loop = true;
+
   const handleStart = () => {
     setScene('firstScene'); // Muda para a primeira cena
+    audio.play();
   };
 
   const handleStart2 = () => {
     setScene('scenePredio');
+    audio.play();
   };
 
   const handleCreators = () => {
@@ -25,6 +32,7 @@ const App = () => {
 
   const handleBack = () => {
     setScene('start'); // Retorna à tela inicial
+    audio.play();
   };
 
   // Handle first video ended to transition to second video

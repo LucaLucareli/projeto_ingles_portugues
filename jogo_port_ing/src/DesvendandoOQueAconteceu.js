@@ -7,7 +7,7 @@ import DesvendandoOQueAconteceuFalandoComOCharles from './DesvendandoOQueAcontec
 const DesvendandoOQueAconteceu = ({ onBack }) => {
   const [textCompleted, setTextCompleted] = useState(false); 
   const [dialogues, setDialogues] = useState([ 
-    { quemfala: 'Esquerda', fala: 'Charles makes me feel strange, I think it will not hurt if I investigate him a little...' },
+    { quemfala: 'Esquerda', fala: 'Charles makes me feel strange, I think it will not hurt if I investigate him a little bit...' },
     { quemfala: 'Esquerda', fala: 'I’ll take his technical sheet home with me, so I can investigate it better with no one looking.' },
     { quemfala: 'Esquerda', fala: 'So, what do we have here? Charles, isn\'t that his real name? Why did they pretend that they do not know anything about this guy? Just because he’s rich?' },
     { quemfala: 'Esquerda', fala: 'He’s German, that’s why he was speaking in German earlier, which makes a lot of sense. He helped German Soldiers, it explains why I recognized him.' },
